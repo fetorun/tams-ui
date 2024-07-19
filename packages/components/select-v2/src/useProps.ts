@@ -1,6 +1,7 @@
 import { computed } from 'vue'
 import { get } from 'lodash-unified'
 
+import { useI18n } from 'vue-i18n'
 import type { ISelectV2Props } from './token'
 import type { Option } from './select.types'
 
@@ -21,7 +22,13 @@ export const defaultProps: Required<Props> = {
 export function useProps(props: Pick<ISelectV2Props, 'props'>) {
   const aliasProps = computed(() => ({ ...defaultProps, ...props.props }))
 
-  const getLabel = (option: Option) => get(option, aliasProps.value.label)
+  let i18n = (item: any) => item
+  try {
+    const { t } = useI18n()
+    i18n = t
+  } catch {}
+
+  const getLabel = (option: Option) => i18n(get(option, aliasProps.value.label))
   const getValue = (option: Option) => get(option, aliasProps.value.value)
   const getDisabled = (option: Option) => get(option, aliasProps.value.disabled)
   const getOptions = (option: Option) => get(option, aliasProps.value.options)

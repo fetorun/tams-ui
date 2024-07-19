@@ -1,6 +1,7 @@
 // @ts-nocheck
 import { computed, getCurrentInstance, inject, toRaw, watch } from 'vue'
 import { get, isEqual } from 'lodash-unified'
+import { useI18n } from 'vue-i18n'
 import { escapeStringRegexp, isObject } from '@element-plus/utils'
 import { selectGroupKey, selectKey } from './token'
 
@@ -32,7 +33,12 @@ export function useOption(props, states) {
   })
 
   const currentLabel = computed(() => {
-    return props.label || (isObject(props.value) ? '' : props.value)
+    try {
+      const { t } = useI18n()
+      return t(props.label || (isObject(props.value) ? '' : props.value))
+    } catch {
+      return props.label || (isObject(props.value) ? '' : props.value)
+    }
   })
 
   const currentValue = computed(() => {
