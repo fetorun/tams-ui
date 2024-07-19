@@ -72,7 +72,7 @@ import { computed, inject, ref, unref } from 'vue'
 import dayjs from 'dayjs'
 import { union } from 'lodash-unified'
 import { useLocale, useNamespace } from '@element-plus/hooks'
-import { isArray } from '@element-plus/utils'
+import { isArray, tamsParseDate } from '@element-plus/utils'
 import { EVENT_CODE } from '@element-plus/constants'
 import { panelTimeRangeProps } from '../props/panel-time-range'
 import { useTimePanel } from '../composables/use-time-panel'
@@ -284,7 +284,7 @@ const {
 const parseUserInput = (days: Dayjs[] | Dayjs) => {
   if (!days) return null
   if (isArray(days)) {
-    return days.map((d) => dayjs(d, props.format).locale(lang.value))
+    return days.map((d) => tamsParseDate(d, props.format, lang.value))
   }
   return dayjs(days, props.format).locale(lang.value)
 }

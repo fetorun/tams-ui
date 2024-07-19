@@ -183,10 +183,10 @@ import { useFormItem, useFormSize } from '@element-plus/components/form'
 import ElInput from '@element-plus/components/input'
 import ElIcon from '@element-plus/components/icon'
 import ElTooltip from '@element-plus/components/tooltip'
-import { debugWarn, isArray } from '@element-plus/utils'
+import { debugWarn, isArray, tamsParseDate } from '@element-plus/utils'
 import { EVENT_CODE } from '@element-plus/constants'
 import { Calendar, Clock } from '@element-plus/icons-vue'
-import { formatter, parseDate, valueEquals } from '../utils'
+import { formatter, valueEquals } from '../utils'
 import { timePickerDefaultProps } from './props'
 
 import type { Dayjs } from 'dayjs'
@@ -443,10 +443,14 @@ const parsedValue = computed(() => {
   } else {
     if (isArray(props.modelValue)) {
       dayOrDays = props.modelValue.map((d) =>
-        parseDate(d, props.valueFormat, lang.value)
+        tamsParseDate(d, props.valueFormat, lang.value)
       ) as [Dayjs, Dayjs]
     } else {
-      dayOrDays = parseDate(props.modelValue, props.valueFormat, lang.value)!
+      dayOrDays = tamsParseDate(
+        props.modelValue,
+        props.valueFormat,
+        lang.value
+      )!
     }
   }
 

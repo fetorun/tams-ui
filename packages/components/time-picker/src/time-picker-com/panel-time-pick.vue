@@ -42,7 +42,7 @@ import { computed, inject, ref } from 'vue'
 import dayjs from 'dayjs'
 import { EVENT_CODE } from '@element-plus/constants'
 import { useLocale, useNamespace } from '@element-plus/hooks'
-import { isUndefined } from '@element-plus/utils'
+import { isUndefined, tamsParseDate } from '@element-plus/utils'
 import { panelTimePickerProps } from '../props/panel-time-picker'
 import { useTimePanel } from '../composables/use-time-panel'
 import {
@@ -156,7 +156,7 @@ const getRangeAvailableTime = (date: Dayjs) => {
 
 const parseUserInput = (value: Dayjs) => {
   if (!value) return null
-  return dayjs(value, props.format).locale(lang.value)
+  return tamsParseDate(value, props.format, lang.value)
 }
 
 const formatToString = (value: Dayjs) => {

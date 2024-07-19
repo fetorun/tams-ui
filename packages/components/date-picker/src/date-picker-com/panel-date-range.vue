@@ -253,7 +253,7 @@
 import { computed, inject, ref, toRef, unref } from 'vue'
 import dayjs from 'dayjs'
 import { ClickOutside as vClickoutside } from '@element-plus/directives'
-import { isArray } from '@element-plus/utils'
+import { isArray, tamsParseDate } from '@element-plus/utils'
 import { useLocale } from '@element-plus/hooks'
 import ElButton from '@element-plus/components/button'
 import ElInput from '@element-plus/components/input'
@@ -592,9 +592,9 @@ const handleDateChange = (_: unknown, type: ChangeType) => {
 
 const handleTimeInput = (value: string | null, type: ChangeType) => {
   timeUserInput.value[type] = value
-  const parsedValueD = dayjs(value, timeFormat.value).locale(lang.value)
+  const parsedValueD = tamsParseDate(value, timeFormat.value, lang.value)
 
-  if (parsedValueD.isValid()) {
+  if (parsedValueD !== undefined) {
     if (type === 'min') {
       minTimePickerVisible.value = true
       minDate.value = (minDate.value || leftDate.value)
@@ -692,8 +692,8 @@ const formatToString = (value: Dayjs | Dayjs[]) => {
 
 const parseUserInput = (value: Dayjs | Dayjs[]) => {
   return isArray(value)
-    ? value.map((_) => dayjs(_, format.value).locale(lang.value))
-    : dayjs(value, format.value).locale(lang.value)
+    ? value.map((_) => tamsParseDate(_, format.value, lang.value))
+    : tamsParseDate(value, format.value, lang.value)
 }
 
 function onParsedValueChanged(

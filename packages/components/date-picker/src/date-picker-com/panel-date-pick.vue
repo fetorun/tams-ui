@@ -205,7 +205,12 @@ import {
   extractTimeFormat,
 } from '@element-plus/components/time-picker'
 import { ElIcon } from '@element-plus/components/icon'
-import { isArray, isFunction } from '@element-plus/utils'
+import {
+  isArray,
+  isFunction,
+  tamsNow,
+  tamsParseDate,
+} from '@element-plus/utils'
 import { EVENT_CODE } from '@element-plus/constants'
 import {
   ArrowLeft,
@@ -493,14 +498,14 @@ const disabledNow = computed(() => {
 const changeToNow = () => {
   // NOTE: not a permanent solution
   //       consider disable "now" button in the future
-  const now = dayjs().locale(lang.value)
+  const now = tamsNow() || dayjs().locale(lang.value)
   const nowDate = now.toDate()
   isChangeToNow.value = true
   if (
     (!disabledDate || !disabledDate(nowDate)) &&
     checkDateWithinRange(nowDate)
   ) {
-    innerDate.value = dayjs().locale(lang.value)
+    innerDate.value = tamsNow() || dayjs().locale(lang.value)
     emit(innerDate.value)
   }
 }
@@ -561,8 +566,8 @@ const handleTimePick = (value: Dayjs, visible: boolean, first: boolean) => {
 }
 
 const handleVisibleTimeChange = (value: string) => {
-  const newDate = dayjs(value, timeFormat.value).locale(lang.value)
-  if (newDate.isValid() && checkDateWithinRange(newDate)) {
+  const newDate = tamsParseDate(value, timeFormat.value, lang.value)
+  if (newDate !== undefined && checkDateWithinRange(newDate)) {
     const { year, month, date } = getUnits(innerDate.value)
     innerDate.value = newDate.year(year).month(month).date(date)
     userInputTime.value = null
@@ -572,8 +577,8 @@ const handleVisibleTimeChange = (value: string) => {
 }
 
 const handleVisibleDateChange = (value: string) => {
-  const newDate = dayjs(value, dateFormat.value).locale(lang.value)
-  if (newDate.isValid()) {
+  const newDate = tamsParseDate(value, dateFormat.value, lang.value)
+  if (newDate !== undefined) {
     if (disabledDate && disabledDate(newDate.toDate())) {
       return
     }
@@ -599,7 +604,7 @@ const formatToString = (value: Dayjs | Dayjs[]) => {
 }
 
 const parseUserInput = (value: Dayjs) => {
-  return dayjs(value, props.format).locale(lang.value)
+  return tamsParseDate(value, props.format, lang.value)
 }
 
 const getDefaultValue = () => {
