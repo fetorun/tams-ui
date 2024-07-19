@@ -6,3 +6,5 @@
 # Added extended date parser: tamsParseDate
 
 # Added system now: tamsNow
+
+# Added date picker visible pre-condition: tamsOpenOnFocus

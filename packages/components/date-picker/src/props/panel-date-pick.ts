@@ -16,6 +16,10 @@ export const panelDatePickProps = buildProps({
     type: String,
     default: '',
   },
+  tamsOpenOnFocus: {
+    type: Boolean,
+    default: true,
+  },
 } as const)
 
 export type PanelDatePickProps = ExtractPropTypes<typeof panelDatePickProps>

@@ -536,7 +536,7 @@ const visibleDate = computed(() => {
 
 const timePickerVisible = ref(false)
 const onTimePickerInputFocus = () => {
-  timePickerVisible.value = true
+  if (props.tamsOpenOnFocus) timePickerVisible.value = true
 }
 const handleTimePickClose = () => {
   timePickerVisible.value = false
