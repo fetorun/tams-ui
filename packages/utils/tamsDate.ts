@@ -72,11 +72,12 @@ export const tamsParseDate = (
 
   const delimiters = ['', '.', '/', '-']
 
-  let formatsUserFormat
+  let formatsUserFormat: Array<string>
   if (format === 'yyyy-MM-ddTHH:mm:ss') {
     formatsUserFormat = ['YYYY-MM-DDTHH:mm:ss']
   } else {
-    let userFormat = format
+    let userFormat: string = format
+      .toString()
       .replace(' HH:mm', '')
       .toUpperCase()
       .replace('YYYY', 'YY')
@@ -107,8 +108,8 @@ export const tamsParseDate = (
   }
 
   function getFormatsStartDay() {
-    const formats = []
-    const defaultFormatsStartDay = [
+    const formats: string[] = []
+    const defaultFormatsStartDay: string[] = [
       'DD|MM|YYYYHHmm',
       'DD|MM|YYYY HHmm',
       'DD|MM|YYYY HH:mm',
@@ -181,8 +182,8 @@ export const tamsParseDate = (
   const formatsStartDay = getFormatsStartDay()
 
   function getFormatsStartMonth() {
-    const formats = []
-    const defaultFormatsStartMonth = [
+    const formats: string[] = []
+    const defaultFormatsStartMonth: string[] = [
       'MM|DD|YYYYHHmm',
       'MM|DD|YYYY HHmm',
       'MM|DD|YYYY HH:mm',
@@ -245,8 +246,8 @@ export const tamsParseDate = (
   const formatsStartMonth = getFormatsStartMonth()
 
   function getFormatsStartYearDay() {
-    const formats = []
-    const defaultFormatsStartDay = [
+    const formats: string[] = []
+    const defaultFormatsStartDay: string[] = [
       'YYYY|DD|MMTHH:mm:ss',
 
       'YYYY|DD|MMHHmm',
@@ -291,8 +292,8 @@ export const tamsParseDate = (
   const formatsStartYearDay = getFormatsStartYearDay()
 
   function getFormatsStartYearMonth() {
-    const formats = []
-    const defaultFormatsStartMonth = [
+    const formats: string[] = []
+    const defaultFormatsStartMonth: string[] = [
       'YYYY|MM|DDTHH:mm:ss',
 
       'YYYY|MM|DD HH:mm',
