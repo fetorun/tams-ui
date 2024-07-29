@@ -4,8 +4,8 @@ import {
   iconPropType,
   isBoolean,
   isNumber,
-} from '@element-plus/utils'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+} from '@tams-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@tams-ui/constants'
 import { tourContentProps } from './content'
 import type { CSSProperties, ExtractPropTypes } from 'vue'
 import type Tour from './tour.vue'

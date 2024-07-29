@@ -9,8 +9,8 @@ import {
   unref,
   watchEffect,
 } from 'vue'
-import { debugWarn } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { debugWarn } from '@tams-ui/utils'
+import { useNamespace } from '@tams-ui/hooks'
 import {
   cellForced,
   defaultRenderCell,

@@ -21,7 +21,7 @@ import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@tams-ui/constants'
 import {
   ValidateComponentsMap,
   debugWarn,
@@ -31,22 +31,22 @@ import {
   isNumber,
   isUndefined,
   scrollIntoView,
-} from '@element-plus/utils'
+} from '@tams-ui/utils'
 import {
   useEmptyValues,
   useFocusController,
   useId,
   useLocale,
   useNamespace,
-} from '@element-plus/hooks'
+} from '@tams-ui/hooks'
 import {
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
+} from '@tams-ui/components/form'
 
 import { useInput } from '../../select-v2/src/useInput'
-import type ElTooltip from '@element-plus/components/tooltip'
+import type ElTooltip from '@tams-ui/components/tooltip'
 import type { ISelectProps, SelectOptionProxy } from './token'
 
 const MINIMUM_INPUT_WIDTH = 11

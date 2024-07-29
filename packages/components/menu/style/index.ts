@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/menu.scss'
-import '@element-plus/components/tooltip/style'
+import '@tams-ui/components/base/style'
+import '@tams-ui/theme-chalk/src/menu.scss'
+import '@tams-ui/components/tooltip/style'

@@ -20,18 +20,18 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessage, ElMessageBox } from 'element-plus'
+import { ElMessage, ElMessageBox } from 'tams-ui'
 
-import type { UploadProps, UploadUserFile } from 'element-plus'
+import type { UploadProps, UploadUserFile } from 'tams-ui'
 
 const fileList = ref<UploadUserFile[]>([
   {
     name: 'element-plus-logo.svg',
-    url: 'https://element-plus.org/images/element-plus-logo.svg',
+    url: 'https://tams-ui.org/images/element-plus-logo.svg',
   },
   {
     name: 'element-plus-logo2.svg',
-    url: 'https://element-plus.org/images/element-plus-logo.svg',
+    url: 'https://tams-ui.org/images/element-plus-logo.svg',
   },
 ])
 

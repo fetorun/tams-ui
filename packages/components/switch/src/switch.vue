@@ -74,21 +74,21 @@
 <script lang="ts" setup>
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { isPromise } from '@vue/shared'
-import { addUnit, debugWarn, isBoolean, throwError } from '@element-plus/utils'
-import ElIcon from '@element-plus/components/icon'
+import { Loading } from '@element-plus/icons-vue'
+import { addUnit, debugWarn, isBoolean, throwError } from '@tams-ui/utils'
+import ElIcon from '@tams-ui/components/icon'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
-import { Loading } from '@element-plus/icons-vue'
+} from '@tams-ui/components/form'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { useDeprecated, useNamespace } from '@element-plus/hooks'
+} from '@tams-ui/constants'
+import { useDeprecated, useNamespace } from '@tams-ui/hooks'
 import { switchEmits, switchProps } from './switch'
 import type { CSSProperties } from 'vue'
 
@@ -224,7 +224,7 @@ useDeprecated(
     replacement: 'aria-label',
     version: '2.8.0',
     scope: 'el-switch',
-    ref: 'https://element-plus.org/en-US/component/switch.html',
+    ref: 'https://tams-ui.org/en-US/component/switch.html',
   },
   computed(() => !!props.label)
 )

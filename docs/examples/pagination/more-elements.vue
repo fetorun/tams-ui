@@ -78,7 +78,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { ComponentSize } from 'element-plus'
+import type { ComponentSize } from 'tams-ui'
 const currentPage1 = ref(5)
 const currentPage2 = ref(5)
 const currentPage3 = ref(5)

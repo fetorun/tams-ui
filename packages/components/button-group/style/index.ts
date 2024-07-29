@@ -1,2 +1,2 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/button-group.scss'
+import '@tams-ui/components/base/style'
+import '@tams-ui/theme-chalk/src/button-group.scss'

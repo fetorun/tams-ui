@@ -1,2 +1,2 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/carousel-item.scss'
+import '@tams-ui/components/base/style'
+import '@tams-ui/theme-chalk/src/carousel-item.scss'

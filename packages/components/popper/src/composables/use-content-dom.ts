@@ -1,9 +1,9 @@
 import { computed, ref, unref } from 'vue'
-import { useNamespace, useZIndex } from '@element-plus/hooks'
+import { useNamespace, useZIndex } from '@tams-ui/hooks'
 
-import { isNumber } from '@element-plus/utils'
+import { isNumber } from '@tams-ui/utils'
 import type { CSSProperties, StyleValue } from 'vue'
-import type { UsePopperReturn } from '@element-plus/hooks'
+import type { UsePopperReturn } from '@tams-ui/hooks'
 import type { UsePopperContentReturn } from './use-content'
 import type { PopperContentProps } from '../content'
 

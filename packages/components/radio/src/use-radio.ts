@@ -1,8 +1,8 @@
 import { computed, inject, ref } from 'vue'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { useFormDisabled, useFormSize } from '@element-plus/components/form'
-import { useDeprecated } from '@element-plus/hooks'
-import { isPropAbsent } from '@element-plus/utils'
+import { UPDATE_MODEL_EVENT } from '@tams-ui/constants'
+import { useFormDisabled, useFormSize } from '@tams-ui/components/form'
+import { useDeprecated } from '@tams-ui/hooks'
+import { isPropAbsent } from '@tams-ui/utils'
 import { radioGroupKey } from './constants'
 
 import type { RadioButtonProps } from './radio-button'
@@ -53,7 +53,7 @@ export const useRadio = (
       replacement: 'value',
       version: '3.0.0',
       scope: 'el-radio',
-      ref: 'https://element-plus.org/en-US/component/radio.html',
+      ref: 'https://tams-ui.org/en-US/component/radio.html',
     },
     computed(() => isGroup.value && isPropAbsent(props.value))
   )

@@ -18,8 +18,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { addUnit } from '@element-plus/utils'
+import { useLocale, useNamespace } from '@tams-ui/hooks'
+import { addUnit } from '@tams-ui/utils'
 import ImgEmpty from './img-empty.vue'
 import { emptyProps } from './empty'
 

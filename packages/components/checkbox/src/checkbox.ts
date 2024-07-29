@@ -1,6 +1,6 @@
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { useAriaProps, useSizeProp } from '@element-plus/hooks'
-import { isBoolean, isNumber, isString } from '@element-plus/utils'
+import { UPDATE_MODEL_EVENT } from '@tams-ui/constants'
+import { useAriaProps, useSizeProp } from '@tams-ui/hooks'
+import { isBoolean, isNumber, isString } from '@tams-ui/utils'
 
 import type { ExtractPropTypes } from 'vue'
 import type Checkbox from './checkbox.vue'

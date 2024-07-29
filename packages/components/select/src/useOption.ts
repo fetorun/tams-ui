@@ -2,7 +2,7 @@
 import { computed, getCurrentInstance, inject, toRaw, watch } from 'vue'
 import { get, isEqual } from 'lodash-unified'
 import { useI18n } from 'vue-i18n'
-import { escapeStringRegexp, isObject } from '@element-plus/utils'
+import { escapeStringRegexp, isObject } from '@tams-ui/utils'
 import { selectGroupKey, selectKey } from './token'
 
 export function useOption(props, states) {

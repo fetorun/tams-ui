@@ -55,12 +55,12 @@
 
 <script lang="ts" setup>
 import { computed, h, reactive, ref, useSlots, watch } from 'vue'
-import { debugWarn, isEmpty, isUndefined } from '@element-plus/utils'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { ElButton } from '@element-plus/components/button'
-import { ElIcon } from '@element-plus/components/icon'
-import { useFormItem } from '@element-plus/components/form'
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
+import { debugWarn, isEmpty, isUndefined } from '@tams-ui/utils'
+import { useLocale, useNamespace } from '@tams-ui/hooks'
+import { ElButton } from '@tams-ui/components/button'
+import { ElIcon } from '@tams-ui/components/icon'
+import { useFormItem } from '@tams-ui/components/form'
 import { transferEmits, transferProps } from './transfer'
 import {
   useCheckedChange,

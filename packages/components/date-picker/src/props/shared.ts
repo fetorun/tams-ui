@@ -1,9 +1,9 @@
-import { buildProps, definePropType, isArray } from '@element-plus/utils'
-import { datePickTypes } from '@element-plus/constants'
+import { buildProps, definePropType, isArray } from '@tams-ui/utils'
+import { datePickTypes } from '@tams-ui/constants'
 
 import type { ExtractPropTypes } from 'vue'
 import type { Dayjs } from 'dayjs'
-import type { DatePickType } from '@element-plus/constants'
+import type { DatePickType } from '@tams-ui/constants'
 
 const selectionModes = [
   'date',

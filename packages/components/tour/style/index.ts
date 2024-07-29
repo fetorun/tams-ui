@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/components/button/style'
-import '@element-plus/theme-chalk/src/tour.scss'
+import '@tams-ui/components/base/style'
+import '@tams-ui/components/button/style'
+import '@tams-ui/theme-chalk/src/tour.scss'

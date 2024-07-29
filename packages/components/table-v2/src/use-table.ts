@@ -7,8 +7,8 @@ import {
   unref,
   watch,
 } from 'vue'
-import { isArray } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { isArray } from '@tams-ui/utils'
+import { useNamespace } from '@tams-ui/hooks'
 import {
   useColumns,
   useData,

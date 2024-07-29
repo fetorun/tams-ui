@@ -1,2 +1,2 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/header.scss'
+import '@tams-ui/components/base/style'
+import '@tams-ui/theme-chalk/src/header.scss'

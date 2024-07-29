@@ -66,31 +66,31 @@
 <script lang="ts" setup>
 import { computed, onMounted, onUpdated, reactive, ref, watch } from 'vue'
 import { isNil } from 'lodash-unified'
-import { ElInput } from '@element-plus/components/input'
-import { ElIcon } from '@element-plus/components/icon'
+import { ArrowDown, ArrowUp, Minus, Plus } from '@element-plus/icons-vue'
+import { ElInput } from '@tams-ui/components/input'
+import { ElIcon } from '@tams-ui/components/icon'
 import {
   useFormDisabled,
   useFormItem,
   useFormSize,
-} from '@element-plus/components/form'
-import { vRepeatClick } from '@element-plus/directives'
-import { useDeprecated, useLocale, useNamespace } from '@element-plus/hooks'
+} from '@tams-ui/components/form'
+import { vRepeatClick } from '@tams-ui/directives'
+import { useDeprecated, useLocale, useNamespace } from '@tams-ui/hooks'
 import {
   debugWarn,
   isNumber,
   isString,
   isUndefined,
   throwError,
-} from '@element-plus/utils'
-import { ArrowDown, ArrowUp, Minus, Plus } from '@element-plus/icons-vue'
+} from '@tams-ui/utils'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@tams-ui/constants'
 import { inputNumberEmits, inputNumberProps } from './input-number'
 
-import type { InputInstance } from '@element-plus/components/input'
+import type { InputInstance } from '@tams-ui/components/input'
 
 defineOptions({
   name: 'ElInputNumber',
@@ -347,7 +347,7 @@ useDeprecated(
     replacement: 'aria-label',
     version: '2.8.0',
     scope: 'el-input-number',
-    ref: 'https://element-plus.org/en-US/component/input-number.html',
+    ref: 'https://tams-ui.org/en-US/component/input-number.html',
   },
   computed(() => !!props.label)
 )

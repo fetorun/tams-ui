@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { getCurrentInstance, ref, toRefs, unref, watch } from 'vue'
-import { hasOwn } from '@element-plus/utils'
+import { hasOwn } from '@tams-ui/utils'
 import {
   getColumnById,
   getColumnByKey,

@@ -14,17 +14,17 @@ import {
   useResizeObserver,
   useWindowFocus,
 } from '@vueuse/core'
+import { ArrowLeft, ArrowRight, Close } from '@element-plus/icons-vue'
 import {
   buildProps,
   capitalize,
   definePropType,
   mutable,
   throwError,
-} from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
-import { ElIcon } from '@element-plus/components/icon'
-import { ArrowLeft, ArrowRight, Close } from '@element-plus/icons-vue'
-import { useNamespace } from '@element-plus/hooks'
+} from '@tams-ui/utils'
+import { EVENT_CODE } from '@tams-ui/constants'
+import { ElIcon } from '@tams-ui/components/icon'
+import { useNamespace } from '@tams-ui/hooks'
 import TabBar from './tab-bar.vue'
 import { tabsRootContextKey } from './constants'
 

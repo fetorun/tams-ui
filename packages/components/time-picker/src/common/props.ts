@@ -1,10 +1,6 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import {
-  useAriaProps,
-  useEmptyValuesProps,
-  useSizeProp,
-} from '@element-plus/hooks'
 import { CircleClose } from '@element-plus/icons-vue'
+import { buildProps, definePropType } from '@tams-ui/utils'
+import { useAriaProps, useEmptyValuesProps, useSizeProp } from '@tams-ui/hooks'
 import { disabledTimeListsProps } from '../props/shared'
 
 import type { Component, ExtractPropTypes } from 'vue'

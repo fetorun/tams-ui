@@ -7,10 +7,8 @@ import {
   isBoolean,
   isObject,
   throwError,
-} from '@element-plus/utils'
-import ElTooltip, {
-  type ElTooltipProps,
-} from '@element-plus/components/tooltip'
+} from '@tams-ui/utils'
+import ElTooltip, { type ElTooltipProps } from '@tams-ui/components/tooltip'
 import type { Table } from './table/defaults'
 import type { TableColumnCtx } from './table-column/defaults'
 

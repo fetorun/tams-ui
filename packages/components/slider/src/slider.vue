@@ -109,9 +109,9 @@
 
 <script lang="ts" setup>
 import { computed, provide, reactive, toRefs } from 'vue'
-import ElInputNumber from '@element-plus/components/input-number'
-import { useFormItemInputId, useFormSize } from '@element-plus/components/form'
-import { useDeprecated, useLocale, useNamespace } from '@element-plus/hooks'
+import ElInputNumber from '@tams-ui/components/input-number'
+import { useFormItemInputId, useFormSize } from '@tams-ui/components/form'
+import { useDeprecated, useLocale, useNamespace } from '@tams-ui/hooks'
 import { sliderContextKey } from './constants'
 import { sliderEmits, sliderProps } from './slider'
 import SliderButton from './button.vue'
@@ -251,7 +251,7 @@ useDeprecated(
     replacement: 'aria-label',
     version: '2.8.0',
     scope: 'el-slider',
-    ref: 'https://element-plus.org/en-US/component/slider.html',
+    ref: 'https://tams-ui.org/en-US/component/slider.html',
   },
   computed(() => !!props.label)
 )

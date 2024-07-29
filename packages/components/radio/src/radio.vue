@@ -41,7 +41,7 @@
 
 <script lang="ts" setup>
 import { nextTick } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@tams-ui/hooks'
 import { radioEmits, radioProps } from './radio'
 import { useRadio } from './use-radio'
 

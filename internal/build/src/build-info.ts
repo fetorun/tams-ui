@@ -1,6 +1,6 @@
 import path from 'path'
-import { PKG_NAME } from '@element-plus/build-constants'
-import { epOutput } from '@element-plus/build-utils'
+import { PKG_NAME } from '@tams-ui/build-constants'
+import { epOutput } from '@tams-ui/build-utils'
 
 import type { ModuleFormat } from 'rollup'
 
@@ -13,12 +13,12 @@ export interface BuildInfo {
   output: {
     /** e.g: `es` */
     name: string
-    /** e.g: `dist/element-plus/es` */
+    /** e.g: `dist/tams-ui/es` */
     path: string
   }
 
   bundle: {
-    /** e.g: `element-plus/es` */
+    /** e.g: `tams-ui/es` */
     path: string
   }
 }

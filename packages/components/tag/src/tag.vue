@@ -30,10 +30,10 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import ElIcon from '@element-plus/components/icon'
 import { Close } from '@element-plus/icons-vue'
-import { useNamespace } from '@element-plus/hooks'
-import { useFormSize } from '@element-plus/components/form'
+import ElIcon from '@tams-ui/components/icon'
+import { useNamespace } from '@tams-ui/hooks'
+import { useFormSize } from '@tams-ui/components/form'
 
 import { tagEmits, tagProps } from './tag'
 

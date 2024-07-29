@@ -7,8 +7,8 @@ import {
   onUnmounted,
   watch,
 } from 'vue'
-import { addClass, isClient, rAF, removeClass } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { addClass, isClient, rAF, removeClass } from '@tams-ui/utils'
+import { useNamespace } from '@tams-ui/hooks'
 import useLayoutObserver from '../layout-observer'
 import { removePopper } from '../util'
 import { TABLE_INJECTION_KEY } from '../tokens'

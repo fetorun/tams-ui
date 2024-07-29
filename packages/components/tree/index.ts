@@ -1,7 +1,7 @@
 import Tree from './src/tree.vue'
 
 import type { App } from 'vue'
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@tams-ui/utils'
 
 Tree.install = (app: App): void => {
   app.component(Tree.name!, Tree)

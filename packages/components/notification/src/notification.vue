@@ -40,10 +40,10 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref } from 'vue'
 import { useEventListener, useTimeoutFn } from '@vueuse/core'
-import { CloseComponents, TypeComponentsMap } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
-import { ElIcon } from '@element-plus/components/icon'
-import { useGlobalComponentSettings } from '@element-plus/components/config-provider'
+import { CloseComponents, TypeComponentsMap } from '@tams-ui/utils'
+import { EVENT_CODE } from '@tams-ui/constants'
+import { ElIcon } from '@tams-ui/components/icon'
+import { useGlobalComponentSettings } from '@tams-ui/components/config-provider'
 import { notificationEmits, notificationProps } from './notification'
 
 import type { CSSProperties } from 'vue'

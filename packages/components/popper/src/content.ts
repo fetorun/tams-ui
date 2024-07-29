@@ -1,6 +1,6 @@
 import { placements } from '@popperjs/core'
-import { buildProps, definePropType } from '@element-plus/utils'
-import { useAriaProps } from '@element-plus/hooks'
+import { buildProps, definePropType } from '@tams-ui/utils'
+import { useAriaProps } from '@tams-ui/hooks'
 
 import type { ExtractPropTypes, StyleValue } from 'vue'
 import type { Options, Placement } from '@popperjs/core'

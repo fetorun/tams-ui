@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { getCurrentInstance, watch } from 'vue'
-import { hasOwn } from '@element-plus/utils'
+import { hasOwn } from '@tams-ui/utils'
 import { parseMinWidth, parseWidth } from '../util'
 
 import type { ComputedRef } from 'vue'

@@ -1,1 +1,1 @@
-import '@element-plus/components/base/style/css'
+import '@tams-ui/components/base/style/css'

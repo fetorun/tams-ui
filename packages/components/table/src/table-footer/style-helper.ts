@@ -1,4 +1,4 @@
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@tams-ui/hooks'
 import {
   ensurePosition,
   getFixedColumnOffset,

@@ -17,15 +17,15 @@
 <script lang="ts">
 // @ts-nocheck
 import { computed, defineComponent, inject, unref } from 'vue'
-import { composeEventHandlers, composeRefs } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
-import { FOCUS_TRAP_INJECTION_KEY } from '@element-plus/components/focus-trap'
+import { composeEventHandlers, composeRefs } from '@tams-ui/utils'
+import { EVENT_CODE } from '@tams-ui/constants'
+import { FOCUS_TRAP_INJECTION_KEY } from '@tams-ui/components/focus-trap'
 import {
   ROVING_FOCUS_COLLECTION_INJECTION_KEY,
   ROVING_FOCUS_GROUP_INJECTION_KEY,
   focusFirst,
-} from '@element-plus/components/roving-focus-group'
-import { useNamespace } from '@element-plus/hooks'
+} from '@tams-ui/components/roving-focus-group'
+import { useNamespace } from '@tams-ui/hooks'
 import { DROPDOWN_INJECTION_KEY } from './tokens'
 import {
   DROPDOWN_COLLECTION_INJECTION_KEY,

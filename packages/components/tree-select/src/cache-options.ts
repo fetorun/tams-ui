@@ -1,7 +1,7 @@
 import { defineComponent, inject, watch } from 'vue'
-import { selectKey } from '@element-plus/components/select'
-import { isClient } from '@element-plus/utils'
-import type { SelectContext } from '@element-plus/components/select'
+import { selectKey } from '@tams-ui/components/select'
+import { isClient } from '@tams-ui/utils'
+import type { SelectContext } from '@tams-ui/components/select'
 import type { PropType } from 'vue'
 
 // same as el-option instance,

@@ -3,8 +3,8 @@ import {
   definePropType,
   iconPropType,
   isNumber,
-} from '@element-plus/utils'
-import { componentSizes } from '@element-plus/constants'
+} from '@tams-ui/utils'
+import { componentSizes } from '@tams-ui/constants'
 import type { ExtractPropTypes } from 'vue'
 import type { ObjectFitProperty } from 'csstype'
 

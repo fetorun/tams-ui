@@ -1,4 +1,4 @@
-import { buildProps, definePropType } from '@element-plus/utils'
+import { buildProps, definePropType } from '@tams-ui/utils'
 
 import type { DescriptionItemVNode } from './description-item'
 

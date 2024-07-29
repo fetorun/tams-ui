@@ -46,10 +46,10 @@ import {
   ref,
   watch,
 } from 'vue'
-import { iconPropType } from '@element-plus/utils'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { formItemContextKey } from '@element-plus/components/form'
-import { selectKey } from '@element-plus/components/select/src/token'
+import { iconPropType } from '@tams-ui/utils'
+import { useLocale, useNamespace } from '@tams-ui/hooks'
+import { formItemContextKey } from '@tams-ui/components/form'
+import { selectKey } from '@tams-ui/components/select/src/token'
 import TreeStore from './model/tree-store'
 import { getNodeKey as getNodeKeyUtil, handleCurrentChange } from './model/util'
 import ElTreeNode from './tree-node.vue'
@@ -59,7 +59,7 @@ import { useKeydown } from './model/useKeydown'
 import type Node from './model/node'
 
 import type { ComponentInternalInstance, PropType } from 'vue'
-import type { Nullable } from '@element-plus/utils'
+import type { Nullable } from '@tams-ui/utils'
 import type {
   TreeComponentProps,
   TreeData,

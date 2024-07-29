@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-color-picker.css'
-import '@element-plus/components/input/style/css'
-import '@element-plus/components/button/style/css'
+import '@tams-ui/components/base/style/css'
+import '@tams-ui/theme-chalk/el-color-picker.css'
+import '@tams-ui/components/input/style/css'
+import '@tams-ui/components/button/style/css'

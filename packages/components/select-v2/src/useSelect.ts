@@ -16,34 +16,34 @@ import {
   debounce as lodashDebounce,
 } from 'lodash-unified'
 import { useResizeObserver } from '@vueuse/core'
+import { ArrowDown } from '@element-plus/icons-vue'
 import {
   useEmptyValues,
   useFocusController,
   useLocale,
   useNamespace,
-} from '@element-plus/hooks'
+} from '@tams-ui/hooks'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@tams-ui/constants'
 import {
   ValidateComponentsMap,
   debugWarn,
   escapeStringRegexp,
-} from '@element-plus/utils'
+} from '@tams-ui/utils'
 import {
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
+} from '@tams-ui/components/form'
 
-import { ArrowDown } from '@element-plus/icons-vue'
 import { useAllowCreate } from './useAllowCreate'
 import { useInput } from './useInput'
 import { useProps } from './useProps'
 
-import type ElTooltip from '@element-plus/components/tooltip'
+import type ElTooltip from '@tams-ui/components/tooltip'
 import type { Option, OptionType } from './select.types'
 import type { ISelectV2Props } from './token'
 

@@ -1,7 +1,7 @@
 import { computed } from 'vue'
-import { useFormItem, useFormItemInputId } from '@element-plus/components/form'
-import { isArray, isPropAbsent } from '@element-plus/utils'
-import { useDeprecated } from '@element-plus/hooks'
+import { useFormItem, useFormItemInputId } from '@tams-ui/components/form'
+import { isArray, isPropAbsent } from '@tams-ui/utils'
+import { useDeprecated } from '@tams-ui/hooks'
 import { useCheckboxDisabled } from './use-checkbox-disabled'
 import { useCheckboxEvent } from './use-checkbox-event'
 import { useCheckboxModel } from './use-checkbox-model'
@@ -57,7 +57,7 @@ export const useCheckbox = (
       replacement: 'aria-controls',
       version: '2.8.0',
       scope: 'el-checkbox',
-      ref: 'https://element-plus.org/en-US/component/checkbox.html',
+      ref: 'https://tams-ui.org/en-US/component/checkbox.html',
     },
     computed(() => !!props.controls)
   )
@@ -68,7 +68,7 @@ export const useCheckbox = (
       replacement: 'value',
       version: '3.0.0',
       scope: 'el-checkbox',
-      ref: 'https://element-plus.org/en-US/component/checkbox.html',
+      ref: 'https://tams-ui.org/en-US/component/checkbox.html',
     },
     computed(() => isGroup.value && isPropAbsent(props.value))
   )
@@ -79,7 +79,7 @@ export const useCheckbox = (
       replacement: 'true-value',
       version: '3.0.0',
       scope: 'el-checkbox',
-      ref: 'https://element-plus.org/en-US/component/checkbox.html',
+      ref: 'https://tams-ui.org/en-US/component/checkbox.html',
     },
     computed(() => !!props.trueLabel)
   )
@@ -90,7 +90,7 @@ export const useCheckbox = (
       replacement: 'false-value',
       version: '3.0.0',
       scope: 'el-checkbox',
-      ref: 'https://element-plus.org/en-US/component/checkbox.html',
+      ref: 'https://tams-ui.org/en-US/component/checkbox.html',
     },
     computed(() => !!props.falseLabel)
   )

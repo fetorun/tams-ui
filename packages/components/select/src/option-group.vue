@@ -22,8 +22,8 @@ import {
   toRefs,
 } from 'vue'
 import { useMutationObserver } from '@vueuse/core'
-import { ensureArray } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { ensureArray } from '@tams-ui/utils'
+import { useNamespace } from '@tams-ui/hooks'
 import { selectGroupKey } from './token'
 
 export default defineComponent({

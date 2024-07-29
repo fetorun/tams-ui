@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs'
 import mdContainer from 'markdown-it-container'
-import { docRoot } from '@element-plus/build-utils'
+import { docRoot } from '@tams-ui/build-utils'
 import externalLinkIcon from '../plugins/external-link-icon'
 import tableWrapper from '../plugins/table-wrapper'
 import tooltip from '../plugins/tooltip'

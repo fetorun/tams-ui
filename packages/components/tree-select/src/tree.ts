@@ -1,9 +1,9 @@
 // @ts-nocheck
 import { computed, nextTick, toRefs, watch } from 'vue'
 import { isEqual, pick } from 'lodash-unified'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { escapeStringRegexp, isFunction } from '@element-plus/utils'
-import ElTree from '@element-plus/components/tree'
+import { UPDATE_MODEL_EVENT } from '@tams-ui/constants'
+import { escapeStringRegexp, isFunction } from '@tams-ui/utils'
+import ElTree from '@tams-ui/components/tree'
 import TreeSelectOption from './tree-select-option'
 import {
   isValidArray,
@@ -14,10 +14,10 @@ import {
 } from './utils'
 import type { CacheOption } from './cache-options'
 import type { Ref } from 'vue'
-import type ElSelect from '@element-plus/components/select'
-import type Node from '@element-plus/components/tree/src/model/node'
-import type { TreeNodeData } from '@element-plus/components/tree/src/tree.type'
-import type { TreeInstance } from '@element-plus/components/tree'
+import type ElSelect from '@tams-ui/components/select'
+import type Node from '@tams-ui/components/tree/src/model/node'
+import type { TreeNodeData } from '@tams-ui/components/tree/src/tree.type'
+import type { TreeInstance } from '@tams-ui/components/tree'
 
 export const useTree = (
   props,

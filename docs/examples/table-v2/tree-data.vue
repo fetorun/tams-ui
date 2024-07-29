@@ -14,9 +14,9 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { TableV2FixedDir } from 'element-plus'
+import { TableV2FixedDir } from 'tams-ui'
 
-import type { ExpandedRowsChangeHandler, RowExpandHandler } from 'element-plus'
+import type { ExpandedRowsChangeHandler, RowExpandHandler } from 'tams-ui'
 
 const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
   Array.from({ length }).map((_, columnIndex) => ({

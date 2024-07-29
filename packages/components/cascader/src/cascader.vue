@@ -201,41 +201,41 @@ import { computed, nextTick, onMounted, ref, useAttrs, watch } from 'vue'
 import { isPromise } from '@vue/shared'
 import { cloneDeep, debounce } from 'lodash-unified'
 import { useCssVar, useResizeObserver } from '@vueuse/core'
-import ElCascaderPanel from '@element-plus/components/cascader-panel'
-import ElInput from '@element-plus/components/input'
-import ElTooltip from '@element-plus/components/tooltip'
-import ElScrollbar from '@element-plus/components/scrollbar'
-import ElTag from '@element-plus/components/tag'
-import ElIcon from '@element-plus/components/icon'
-import { useFormItem, useFormSize } from '@element-plus/components/form'
-import { ClickOutside as vClickoutside } from '@element-plus/directives'
-import { useEmptyValues, useLocale, useNamespace } from '@element-plus/hooks'
+import { ArrowDown, Check, CircleClose } from '@element-plus/icons-vue'
+import ElCascaderPanel from '@tams-ui/components/cascader-panel'
+import ElInput from '@tams-ui/components/input'
+import ElTooltip from '@tams-ui/components/tooltip'
+import ElScrollbar from '@tams-ui/components/scrollbar'
+import ElTag from '@tams-ui/components/tag'
+import ElIcon from '@tams-ui/components/icon'
+import { useFormItem, useFormSize } from '@tams-ui/components/form'
+import { ClickOutside as vClickoutside } from '@tams-ui/directives'
+import { useEmptyValues, useLocale, useNamespace } from '@tams-ui/hooks'
 import {
   debugWarn,
   focusNode,
   getSibling,
   isClient,
   isKorean,
-} from '@element-plus/utils'
+} from '@tams-ui/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { ArrowDown, Check, CircleClose } from '@element-plus/icons-vue'
+} from '@tams-ui/constants'
 import { cascaderEmits, cascaderProps } from './cascader'
 
-import type { Options } from '@element-plus/components/popper'
+import type { Options } from '@tams-ui/components/popper'
 import type { ComputedRef, Ref, StyleValue } from 'vue'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
-import type { InputInstance } from '@element-plus/components/input'
-import type { ScrollbarInstance } from '@element-plus/components/scrollbar'
+import type { TooltipInstance } from '@tams-ui/components/tooltip'
+import type { InputInstance } from '@tams-ui/components/input'
+import type { ScrollbarInstance } from '@tams-ui/components/scrollbar'
 import type {
   CascaderNode,
   CascaderPanelInstance,
   CascaderValue,
   Tag,
-} from '@element-plus/components/cascader-panel'
+} from '@tams-ui/components/cascader-panel'
 
 const popperOptions: Partial<Options> = {
   modifiers: [

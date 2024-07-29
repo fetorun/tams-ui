@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-dialog.css'
-import '@element-plus/components/overlay/style/css'
+import '@tams-ui/components/base/style/css'
+import '@tams-ui/theme-chalk/el-dialog.css'
+import '@tams-ui/components/overlay/style/css'

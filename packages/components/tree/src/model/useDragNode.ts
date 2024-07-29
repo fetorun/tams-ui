@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { provide, ref } from 'vue'
-import { addClass, removeClass } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { addClass, removeClass } from '@tams-ui/utils'
+import { useNamespace } from '@tams-ui/hooks'
 import type { InjectionKey } from 'vue'
 import type Node from './node'
 import type { NodeDropType } from '../tree.type'

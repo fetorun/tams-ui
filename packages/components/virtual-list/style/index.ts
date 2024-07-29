@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/virtual-list.scss'
-import '@element-plus/components/scrollbar/style'
+import '@tams-ui/components/base/style'
+import '@tams-ui/theme-chalk/src/virtual-list.scss'
+import '@tams-ui/components/scrollbar/style'

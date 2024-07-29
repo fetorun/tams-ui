@@ -45,11 +45,11 @@
 </template>
 <script lang="ts" setup>
 import { computed, ref, unref } from 'vue'
-import { ElTooltip } from '@element-plus/components/tooltip'
-import { addUnit } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { ElTooltip } from '@tams-ui/components/tooltip'
+import { addUnit } from '@tams-ui/utils'
+import { useNamespace } from '@tams-ui/hooks'
 import { popoverEmits, popoverProps } from './popover'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { TooltipInstance } from '@tams-ui/components/tooltip'
 
 defineOptions({
   name: 'ElPopover',

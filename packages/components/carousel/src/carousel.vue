@@ -89,9 +89,9 @@
 
 <script lang="ts" setup>
 import { computed, unref } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import { ElIcon } from '@tams-ui/components/icon'
+import { useLocale, useNamespace } from '@tams-ui/hooks'
 import { carouselEmits, carouselProps } from './carousel'
 import { useCarousel } from './use-carousel'
 

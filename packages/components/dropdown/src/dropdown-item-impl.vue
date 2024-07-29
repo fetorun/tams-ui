@@ -32,12 +32,12 @@ import { computed, defineComponent, inject } from 'vue'
 import {
   ROVING_FOCUS_GROUP_ITEM_INJECTION_KEY,
   ROVING_FOCUS_ITEM_COLLECTION_INJECTION_KEY,
-} from '@element-plus/components/roving-focus-group'
-import { COLLECTION_ITEM_SIGN } from '@element-plus/components/collection'
-import { ElIcon } from '@element-plus/components/icon'
-import { useNamespace } from '@element-plus/hooks'
-import { composeEventHandlers, composeRefs } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+} from '@tams-ui/components/roving-focus-group'
+import { COLLECTION_ITEM_SIGN } from '@tams-ui/components/collection'
+import { ElIcon } from '@tams-ui/components/icon'
+import { useNamespace } from '@tams-ui/hooks'
+import { composeEventHandlers, composeRefs } from '@tams-ui/utils'
+import { EVENT_CODE } from '@tams-ui/constants'
 import {
   DROPDOWN_COLLECTION_ITEM_INJECTION_KEY,
   dropdownItemProps,

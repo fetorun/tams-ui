@@ -24,10 +24,10 @@ import {
   toRefs,
   watch,
 } from 'vue'
-import { useFormItem, useFormItemInputId } from '@element-plus/components/form'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { useDeprecated, useId, useNamespace } from '@element-plus/hooks'
-import { debugWarn } from '@element-plus/utils'
+import { useFormItem, useFormItemInputId } from '@tams-ui/components/form'
+import { UPDATE_MODEL_EVENT } from '@tams-ui/constants'
+import { useDeprecated, useId, useNamespace } from '@tams-ui/hooks'
+import { debugWarn } from '@tams-ui/utils'
 import { radioGroupEmits, radioGroupProps } from './radio-group'
 import { radioGroupKey } from './constants'
 
@@ -90,7 +90,7 @@ useDeprecated(
     replacement: 'aria-label',
     version: '2.8.0',
     scope: 'el-radio-group',
-    ref: 'https://element-plus.org/en-US/component/radio.html',
+    ref: 'https://tams-ui.org/en-US/component/radio.html',
   },
   computed(() => !!props.label)
 )

@@ -1,4 +1,4 @@
-import { isClient, isElement } from '@element-plus/utils'
+import { isClient, isElement } from '@tams-ui/utils'
 
 import type {
   ComponentPublicInstance,

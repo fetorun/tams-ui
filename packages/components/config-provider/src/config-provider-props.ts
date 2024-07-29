@@ -1,10 +1,10 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import { useEmptyValuesProps, useSizeProp } from '@element-plus/hooks'
+import { buildProps, definePropType } from '@tams-ui/utils'
+import { useEmptyValuesProps, useSizeProp } from '@tams-ui/hooks'
 
 import type { ExtractPropTypes } from 'vue'
-import type { Language } from '@element-plus/locale'
-import type { ButtonConfigContext } from '@element-plus/components/button'
-import type { MessageConfigContext } from '@element-plus/components/message'
+import type { Language } from '@tams-ui/locale'
+import type { ButtonConfigContext } from '@tams-ui/components/button'
+import type { MessageConfigContext } from '@tams-ui/components/message'
 
 export type ExperimentalFeatures = {
   // TO BE Defined
@@ -58,7 +58,7 @@ export const configProviderProps = buildProps({
    */
   zIndex: Number,
   /**
-   * @description global component className prefix (cooperated with [$namespace](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/mixins/config.scss#L1)) | ^[string]
+   * @description global component className prefix (cooperated with [$namespace](https://github.com/tams-ui/tams-ui/blob/dev/packages/theme-chalk/src/mixins/config.scss#L1)) | ^[string]
    */
   namespace: {
     type: String,

@@ -24,8 +24,8 @@
 </template>
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { isFunction, isNumber } from '@element-plus/utils'
+import { useNamespace } from '@tams-ui/hooks'
+import { isFunction, isNumber } from '@tams-ui/utils'
 import { statisticProps } from './statistic'
 
 defineOptions({

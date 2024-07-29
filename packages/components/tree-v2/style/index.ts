@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/tree.scss'
-import '@element-plus/components/checkbox/style'
-import '@element-plus/components/virtual-list/style'
+import '@tams-ui/components/base/style'
+import '@tams-ui/theme-chalk/src/tree.scss'
+import '@tams-ui/components/checkbox/style'
+import '@tams-ui/components/virtual-list/style'

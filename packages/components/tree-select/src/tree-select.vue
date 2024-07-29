@@ -2,8 +2,8 @@
 // @ts-nocheck
 import { computed, defineComponent, h, onMounted, reactive, ref } from 'vue'
 import { pick } from 'lodash-unified'
-import ElSelect from '@element-plus/components/select'
-import ElTree from '@element-plus/components/tree'
+import ElSelect from '@tams-ui/components/select'
+import ElTree from '@tams-ui/components/tree'
 import { useSelect } from './select'
 import { useTree } from './tree'
 import CacheOptions from './cache-options'

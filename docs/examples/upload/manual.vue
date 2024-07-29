@@ -23,7 +23,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { UploadInstance } from 'element-plus'
+import type { UploadInstance } from 'tams-ui'
 
 const uploadRef = ref<UploadInstance>()
 

@@ -1,8 +1,8 @@
 import installer from './defaults'
-export * from '@element-plus/components'
-export * from '@element-plus/constants'
-export * from '@element-plus/directives'
-export * from '@element-plus/hooks'
+export * from '@tams-ui/components'
+export * from '@tams-ui/constants'
+export * from '@tams-ui/directives'
+export * from '@tams-ui/hooks'
 export * from './make-installer'
 
 export const install = installer.install

@@ -15,14 +15,14 @@ import {
   iconPropType,
   isNumber,
   mutable,
-} from '@element-plus/utils'
+} from '@tams-ui/utils'
 import {
   useDeprecated,
   useGlobalSize,
   useLocale,
   useNamespace,
   useSizeProp,
-} from '@element-plus/hooks'
+} from '@tams-ui/hooks'
 import { elPaginationKey } from './constants'
 
 import Prev from './components/prev.vue'
@@ -203,7 +203,7 @@ export default defineComponent({
         replacement: 'size',
         version: '3.0.0',
         scope: 'el-pagination',
-        ref: 'https://element-plus.org/zh-CN/component/pagination.html',
+        ref: 'https://tams-ui.org/zh-CN/component/pagination.html',
       },
       computed(() => !!props.small)
     )

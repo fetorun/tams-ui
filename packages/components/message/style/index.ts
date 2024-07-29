@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/components/badge/style'
-import '@element-plus/theme-chalk/src/message.scss'
+import '@tams-ui/components/base/style'
+import '@tams-ui/components/badge/style'
+import '@tams-ui/theme-chalk/src/message.scss'

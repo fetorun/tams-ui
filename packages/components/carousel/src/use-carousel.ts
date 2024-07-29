@@ -13,8 +13,8 @@ import {
 } from 'vue'
 import { throttle } from 'lodash-unified'
 import { useResizeObserver } from '@vueuse/core'
-import { debugWarn, flattedChildren, isString } from '@element-plus/utils'
-import { useOrderedChildren } from '@element-plus/hooks'
+import { debugWarn, flattedChildren, isString } from '@tams-ui/utils'
+import { useOrderedChildren } from '@tams-ui/hooks'
 import { carouselContextKey } from './constants'
 
 import type { SetupContext } from 'vue'
@@ -247,7 +247,7 @@ export const useCarousel = (
   }
 
   function PlaceholderItem() {
-    // fix: https://github.com/element-plus/element-plus/issues/12139
+    // fix: https://github.com/tams-ui/tams-ui/issues/12139
     const defaultSlots = slots.default?.()
     if (!defaultSlots) return null
 

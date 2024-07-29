@@ -12,8 +12,8 @@ import {
   resolveDynamicComponent,
   unref,
 } from 'vue'
-import { hasOwn, isClient, isNumber, isString } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { hasOwn, isClient, isNumber, isString } from '@tams-ui/utils'
+import { useNamespace } from '@tams-ui/hooks'
 import { useCache } from '../hooks/use-cache'
 import useWheel from '../hooks/use-wheel'
 import Scrollbar from '../components/scrollbar'

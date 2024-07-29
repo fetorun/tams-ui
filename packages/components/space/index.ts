@@ -1,4 +1,4 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@tams-ui/utils'
 
 import Space from './src/space'
 

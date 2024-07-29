@@ -7,8 +7,8 @@ import {
   isNumber,
   isString,
   isVNode,
-} from '@element-plus/utils'
-import { messageConfig } from '@element-plus/components/config-provider'
+} from '@tams-ui/utils'
+import { messageConfig } from '@tams-ui/components/config-provider'
 import MessageConstructor from './message.vue'
 import { messageDefaults, messageTypes } from './message'
 import { instances } from './instance'

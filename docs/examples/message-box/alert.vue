@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage, ElMessageBox } from 'element-plus'
-import type { Action } from 'element-plus'
+import { ElMessage, ElMessageBox } from 'tams-ui'
+import type { Action } from 'tams-ui'
 
 const open = () => {
   ElMessageBox.alert('This is a message', 'Title', {

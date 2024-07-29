@@ -35,7 +35,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@tams-ui/hooks'
 import { dateTableEmits, dateTableProps } from './date-table'
 import { useDateTable } from './use-date-table'
 

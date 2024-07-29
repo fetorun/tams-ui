@@ -16,7 +16,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { TabsInstance } from 'element-plus'
+import type { TabsInstance } from 'tams-ui'
 
 const tabPosition = ref<TabsInstance['tabPosition']>('left')
 </script>

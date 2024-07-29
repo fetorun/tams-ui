@@ -41,9 +41,9 @@
 
 <script lang="ts" setup>
 import { computed, getCurrentInstance, provide, useSlots } from 'vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { formItemContextKey } from '@element-plus/components/form'
-import { FixedSizeList } from '@element-plus/components/virtual-list'
+import { useLocale, useNamespace } from '@tams-ui/hooks'
+import { formItemContextKey } from '@tams-ui/components/form'
+import { FixedSizeList } from '@tams-ui/components/virtual-list'
 import { useTree } from './composables/useTree'
 import ElTreeNode from './tree-node.vue'
 import { ROOT_TREE_INJECTION_KEY, treeEmits, treeProps } from './virtual-tree'

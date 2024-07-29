@@ -46,8 +46,8 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessageBox } from 'element-plus'
-import type { DrawerProps } from 'element-plus'
+import { ElMessageBox } from 'tams-ui'
+import type { DrawerProps } from 'tams-ui'
 
 const drawer = ref(false)
 const drawer2 = ref(false)

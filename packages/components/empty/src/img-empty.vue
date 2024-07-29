@@ -127,7 +127,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useId, useNamespace } from '@element-plus/hooks'
+import { useId, useNamespace } from '@tams-ui/hooks'
 
 defineOptions({
   name: 'ImgEmpty',

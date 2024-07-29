@@ -1,17 +1,12 @@
 import { placements } from '@popperjs/core'
-import {
-  buildProps,
-  definePropType,
-  isArray,
-  isNumber,
-} from '@element-plus/utils'
+import { buildProps, definePropType, isArray, isNumber } from '@tams-ui/utils'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { useAriaProps, useSizeProp } from '@element-plus/hooks'
-import type { Arrayable } from '@element-plus/utils'
+} from '@tams-ui/constants'
+import { useAriaProps, useSizeProp } from '@tams-ui/hooks'
+import type { Arrayable } from '@tams-ui/utils'
 import type { ExtractPropTypes } from 'vue'
 import type { SliderMarkerProps } from './marker'
 import type Slider from './slider.vue'

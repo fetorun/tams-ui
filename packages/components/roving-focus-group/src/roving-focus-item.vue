@@ -18,9 +18,9 @@ import {
   ref,
   unref,
 } from 'vue'
-import { useId } from '@element-plus/hooks'
-import { composeEventHandlers } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+import { useId } from '@tams-ui/hooks'
+import { composeEventHandlers } from '@tams-ui/utils'
+import { EVENT_CODE } from '@tams-ui/constants'
 import {
   ElCollectionItem as ElRovingFocusCollectionItem,
   ROVING_FOCUS_COLLECTION_INJECTION_KEY,

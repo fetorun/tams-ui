@@ -273,12 +273,12 @@
 
 <script lang="ts">
 import { computed, defineComponent, provide, reactive, toRefs } from 'vue'
-import { isArray } from '@element-plus/utils'
-import { ClickOutside } from '@element-plus/directives'
-import ElTooltip from '@element-plus/components/tooltip'
-import ElTag from '@element-plus/components/tag'
-import ElIcon from '@element-plus/components/icon'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { isArray } from '@tams-ui/utils'
+import { ClickOutside } from '@tams-ui/directives'
+import ElTooltip from '@tams-ui/components/tooltip'
+import ElTag from '@tams-ui/components/tag'
+import ElIcon from '@tams-ui/components/icon'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tams-ui/constants'
 import ElSelectMenu from './select-dropdown'
 import useSelect from './useSelect'
 import { SelectProps } from './defaults'

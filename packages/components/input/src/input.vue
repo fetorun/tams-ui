@@ -162,18 +162,18 @@ import {
 } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
 import { isNil } from 'lodash-unified'
-import { ElIcon } from '@element-plus/components/icon'
 import {
   CircleClose,
   Hide as IconHide,
   View as IconView,
 } from '@element-plus/icons-vue'
+import { ElIcon } from '@tams-ui/components/icon'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
+} from '@tams-ui/components/form'
 import {
   NOOP,
   ValidateComponentsMap,
@@ -181,15 +181,15 @@ import {
   isClient,
   isKorean,
   isObject,
-} from '@element-plus/utils'
+} from '@tams-ui/utils'
 import {
   useAttrs,
   useCursor,
   useDeprecated,
   useFocusController,
   useNamespace,
-} from '@element-plus/hooks'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+} from '@tams-ui/hooks'
+import { UPDATE_MODEL_EVENT } from '@tams-ui/constants'
 import { calcTextareaHeight } from './utils'
 import { inputEmits, inputProps } from './input'
 import type { StyleValue } from 'vue'
@@ -360,7 +360,7 @@ const resizeTextarea = () => {
     // If the scrollbar is displayed, the height of the textarea needs more space than the calculated height.
     // If set textarea height in this case, the scrollbar will not hide.
     // So we need to hide scrollbar first, and reset it in next tick.
-    // see https://github.com/element-plus/element-plus/issues/8825
+    // see https://github.com/tams-ui/tams-ui/issues/8825
     textareaCalcStyle.value = {
       overflowY: 'hidden',
       ...textareaStyle,
@@ -389,7 +389,7 @@ const createOnceInitResize = (resizeTextarea: () => void) => {
     }
   }
 }
-// fix: https://github.com/element-plus/element-plus/issues/12074
+// fix: https://github.com/tams-ui/tams-ui/issues/12074
 const onceInitSizeTextarea = createOnceInitResize(resizeTextarea)
 
 const setNativeInputValue = () => {
@@ -537,7 +537,7 @@ useDeprecated(
     replacement: 'aria-label',
     version: '2.8.0',
     scope: 'el-input',
-    ref: 'https://element-plus.org/en-US/component/input.html',
+    ref: 'https://tams-ui.org/en-US/component/input.html',
   },
   computed(() => !!props.label)
 )

@@ -37,9 +37,9 @@
 </template>
 
 <script lang="ts" setup>
-import ElCollapseTransition from '@element-plus/components/collapse-transition'
-import ElIcon from '@element-plus/components/icon'
 import { ArrowRight } from '@element-plus/icons-vue'
+import ElCollapseTransition from '@tams-ui/components/collapse-transition'
+import ElIcon from '@tams-ui/components/icon'
 import { collapseItemProps } from './collapse-item'
 import { useCollapseItem, useCollapseItemDOM } from './use-collapse-item'
 

@@ -32,8 +32,8 @@
 <script lang="ts" setup>
 import { computed, provide, ref, toRef, useSlots, watch } from 'vue'
 import { useVModel } from '@vueuse/core'
-import { useNamespace, useZIndex } from '@element-plus/hooks'
-import { isBoolean } from '@element-plus/utils'
+import { useNamespace, useZIndex } from '@tams-ui/hooks'
+import { isBoolean } from '@tams-ui/utils'
 import ElTourMask from './mask.vue'
 import ElTourContent from './content.vue'
 import ElTourSteps from './steps'

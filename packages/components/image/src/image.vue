@@ -57,15 +57,15 @@ import {
   watch,
 } from 'vue'
 import { useEventListener, useThrottleFn } from '@vueuse/core'
-import { useAttrs, useLocale, useNamespace } from '@element-plus/hooks'
-import ImageViewer from '@element-plus/components/image-viewer'
+import { useAttrs, useLocale, useNamespace } from '@tams-ui/hooks'
+import ImageViewer from '@tams-ui/components/image-viewer'
 import {
   getScrollContainer,
   isClient,
   isElement,
   isInContainer,
   isString,
-} from '@element-plus/utils'
+} from '@tams-ui/utils'
 import { imageEmits, imageProps } from './image'
 
 import type { CSSProperties, StyleValue } from 'vue'

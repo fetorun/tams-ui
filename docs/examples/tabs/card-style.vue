@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { TabsPaneContext } from 'element-plus'
+import type { TabsPaneContext } from 'tams-ui'
 
 const activeName = ref('first')
 

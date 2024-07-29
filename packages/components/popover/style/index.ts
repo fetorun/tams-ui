@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/components/popper/style'
-import '@element-plus/theme-chalk/src/popover.scss'
+import '@tams-ui/components/base/style'
+import '@tams-ui/components/popper/style'
+import '@tams-ui/theme-chalk/src/popover.scss'

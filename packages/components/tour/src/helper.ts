@@ -16,13 +16,7 @@ import {
   offset as offsetMiddelware,
   shift,
 } from '@floating-ui/dom'
-import {
-  isArray,
-  isClient,
-  isFunction,
-  isString,
-  keysOf,
-} from '@element-plus/utils'
+import { isArray, isClient, isFunction, isString, keysOf } from '@tams-ui/utils'
 
 import type {
   CSSProperties,
@@ -31,7 +25,7 @@ import type {
   Ref,
   SetupContext,
 } from 'vue'
-import type { UseNamespaceReturn } from '@element-plus/hooks'
+import type { UseNamespaceReturn } from '@tams-ui/hooks'
 import type { PosInfo, TourGap, TourMask } from './types'
 import type {
   ComputePositionReturn,

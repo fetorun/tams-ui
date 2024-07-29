@@ -10,7 +10,7 @@
 <script lang="ts">
 // @ts-nocheck
 import { defineComponent } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@tams-ui/hooks'
 
 export default defineComponent({
   props: {

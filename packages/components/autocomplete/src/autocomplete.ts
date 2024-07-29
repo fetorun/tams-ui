@@ -1,22 +1,17 @@
 import { NOOP } from '@vue/shared'
-import {
-  buildProps,
-  definePropType,
-  isObject,
-  isString,
-} from '@element-plus/utils'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
-import { useAriaProps } from '@element-plus/hooks'
+import { buildProps, definePropType, isObject, isString } from '@tams-ui/utils'
+import { useTooltipContentProps } from '@tams-ui/components/tooltip'
+import { useAriaProps } from '@tams-ui/hooks'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@tams-ui/constants'
 
 import type { ExtractPropTypes } from 'vue'
 import type Autocomplete from './autocomplete.vue'
-import type { Placement } from '@element-plus/components/popper'
-import type { Awaitable } from '@element-plus/utils'
+import type { Placement } from '@tams-ui/components/popper'
+import type { Awaitable } from '@tams-ui/utils'
 
 export type AutocompleteData = Record<string, any>[]
 export type AutocompleteFetchSuggestionsCallback = (

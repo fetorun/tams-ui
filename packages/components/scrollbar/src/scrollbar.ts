@@ -1,5 +1,5 @@
-import { buildProps, definePropType, isNumber } from '@element-plus/utils'
-import { useAriaProps } from '@element-plus/hooks'
+import { buildProps, definePropType, isNumber } from '@tams-ui/utils'
+import { useAriaProps } from '@tams-ui/hooks'
 import type { ExtractPropTypes, StyleValue } from 'vue'
 import type Scrollbar from './scrollbar.vue'
 

@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/components/input/style'
-import '@element-plus/theme-chalk/src/input-number.scss'
+import '@tams-ui/components/base/style'
+import '@tams-ui/components/input/style'
+import '@tams-ui/theme-chalk/src/input-number.scss'

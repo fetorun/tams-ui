@@ -21,8 +21,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useDeprecated, useNamespace } from '@element-plus/hooks'
-import { addUnit, isNumber } from '@element-plus/utils'
+import { useDeprecated, useNamespace } from '@tams-ui/hooks'
+import { addUnit, isNumber } from '@tams-ui/utils'
 import { badgeProps } from './badge'
 import type { StyleValue } from 'vue'
 
@@ -62,7 +62,7 @@ useDeprecated(
     replacement: 'badge-style',
     version: '2.8.0',
     scope: 'el-badge',
-    ref: 'https://element-plus.org/en-US/component/badge.html',
+    ref: 'https://tams-ui.org/en-US/component/badge.html',
   },
   computed(() => !!props.dotStyle)
 )
@@ -73,7 +73,7 @@ useDeprecated(
     replacement: 'badge-class',
     version: '2.8.0',
     scope: 'el-badge',
-    ref: 'https://element-plus.org/en-US/component/badge.html',
+    ref: 'https://tams-ui.org/en-US/component/badge.html',
   },
   computed(() => !!props.dotClass)
 )

@@ -71,9 +71,9 @@
 import { computed, inject, ref, unref } from 'vue'
 import dayjs from 'dayjs'
 import { union } from 'lodash-unified'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { isArray, tamsParseDate } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+import { useLocale, useNamespace } from '@tams-ui/hooks'
+import { isArray, tamsParseDate } from '@tams-ui/utils'
+import { EVENT_CODE } from '@tams-ui/constants'
 import { panelTimeRangeProps } from '../props/panel-time-range'
 import { useTimePanel } from '../composables/use-time-panel'
 import {

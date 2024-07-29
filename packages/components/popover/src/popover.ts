@@ -1,9 +1,9 @@
-import { buildProps, isBoolean } from '@element-plus/utils'
+import { buildProps, isBoolean } from '@tams-ui/utils'
 import {
   useTooltipContentProps,
   useTooltipTriggerProps,
-} from '@element-plus/components/tooltip'
-import { dropdownProps } from '@element-plus/components/dropdown'
+} from '@tams-ui/components/tooltip'
+import { dropdownProps } from '@tams-ui/components/dropdown'
 import type { ExtractPropTypes, PropType } from 'vue'
 import type Popover from './popover.vue'
 
@@ -103,7 +103,7 @@ export const popoverProps = buildProps({
     default: 0,
   },
   /**
-   * @description whether a tooltip arrow is displayed or not. For more info, please refer to [ElPopper](https://github.com/element-plus/element-plus/tree/dev/packages/components/popper)
+   * @description whether a tooltip arrow is displayed or not. For more info, please refer to [ElPopper](https://github.com/tams-ui/tams-ui/tree/dev/packages/components/popper)
    */
   showArrow: {
     type: Boolean,

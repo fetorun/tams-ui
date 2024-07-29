@@ -174,19 +174,19 @@ import {
 } from 'vue'
 import { isEqual } from 'lodash-unified'
 import { onClickOutside } from '@vueuse/core'
+import { Calendar, Clock } from '@element-plus/icons-vue'
 import {
   useDeprecated,
   useEmptyValues,
   useLocale,
   useNamespace,
-} from '@element-plus/hooks'
-import { useFormItem, useFormSize } from '@element-plus/components/form'
-import ElInput from '@element-plus/components/input'
-import ElIcon from '@element-plus/components/icon'
-import ElTooltip from '@element-plus/components/tooltip'
-import { debugWarn, isArray, tamsParseDate } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
-import { Calendar, Clock } from '@element-plus/icons-vue'
+} from '@tams-ui/hooks'
+import { useFormItem, useFormSize } from '@tams-ui/components/form'
+import ElInput from '@tams-ui/components/input'
+import ElIcon from '@tams-ui/components/icon'
+import ElTooltip from '@tams-ui/components/tooltip'
+import { debugWarn, isArray, tamsParseDate } from '@tams-ui/utils'
+import { EVENT_CODE } from '@tams-ui/constants'
 import { formatter, valueEquals } from '../utils'
 import { timePickerDefaultProps } from './props'
 
@@ -202,7 +202,7 @@ import type {
   TimePickerDefaultProps,
   UserInput,
 } from './props'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { TooltipInstance } from '@tams-ui/components/tooltip'
 
 // Date object and string
 
@@ -772,7 +772,7 @@ useDeprecated(
     replacement: 'aria-label',
     version: '2.8.0',
     scope: 'el-time-picker',
-    ref: 'https://element-plus.org/en-US/component/time-picker.html',
+    ref: 'https://tams-ui.org/en-US/component/time-picker.html',
   },
   computed(() => !!props.label)
 )

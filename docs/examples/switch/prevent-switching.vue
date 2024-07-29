@@ -13,7 +13,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessage } from 'element-plus'
+import { ElMessage } from 'tams-ui'
 
 const value1 = ref(false)
 const value2 = ref(false)

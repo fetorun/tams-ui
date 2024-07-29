@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { h, inject, ref } from 'vue'
 import { debounce } from 'lodash-unified'
-import { addClass, hasClass, removeClass } from '@element-plus/utils'
+import { addClass, hasClass, removeClass } from '@tams-ui/utils'
 import { createTablePopper, getCell, getColumnByCell } from '../util'
 import { TABLE_INJECTION_KEY } from '../tokens'
 import type { TableColumnCtx } from '../table-column/defaults'
@@ -129,7 +129,7 @@ function useEvents<T>(props: Partial<TableBodyProps<T>>) {
     const range = document.createRange()
     range.setStart(cellChild, 0)
     range.setEnd(cellChild, cellChild.childNodes.length)
-    /** detail: https://github.com/element-plus/element-plus/issues/10790
+    /** detail: https://github.com/tams-ui/tams-ui/issues/10790
      *  What went wrong?
      *  UI > Browser > Zoom, In Blink/WebKit, getBoundingClientRect() sometimes returns inexact values, probably due to lost precision during internal calculations. In the example above:
      *    - Expected: 188

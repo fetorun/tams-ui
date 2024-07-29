@@ -4,7 +4,7 @@ import { renderToString } from '@vue/server-renderer'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 import puppeteer from 'puppeteer'
 import glob from 'fast-glob'
-import ElementPlus, { ID_INJECTION_KEY } from '../dist/element-plus'
+import ElementPlus, { ID_INJECTION_KEY } from '../dist/tams-ui'
 
 import type { Browser } from 'puppeteer'
 
@@ -30,13 +30,7 @@ describe('Cypress Button', () => {
       const page = await browser.newPage()
       await page.goto(`file://${projectRoot}/ssr-testing/index.html`)
       await page.addStyleTag({
-        path: path.join(
-          projectRoot,
-          'dist',
-          'element-plus',
-          'dist',
-          'index.css'
-        ),
+        path: path.join(projectRoot, 'dist', 'tams-ui', 'dist', 'index.css'),
       })
 
       const { default: Demo } = await import(path.join(demoRoot, demoPath))

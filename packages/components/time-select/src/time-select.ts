@@ -1,6 +1,6 @@
-import { buildProps, definePropType } from '@element-plus/utils'
 import { CircleClose, Clock } from '@element-plus/icons-vue'
-import { useEmptyValuesProps, useSizeProp } from '@element-plus/hooks'
+import { buildProps, definePropType } from '@tams-ui/utils'
+import { useEmptyValuesProps, useSizeProp } from '@tams-ui/hooks'
 import type TimeSelect from './time-select.vue'
 import type { Component, ExtractPropTypes, PropType } from 'vue'
 

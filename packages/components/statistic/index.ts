@@ -1,4 +1,4 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@tams-ui/utils'
 import Statistic from './src/statistic.vue'
 
 export const ElStatistic = withInstall(Statistic)

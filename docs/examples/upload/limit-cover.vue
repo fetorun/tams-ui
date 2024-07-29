@@ -23,8 +23,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { genFileId } from 'element-plus'
-import type { UploadInstance, UploadProps, UploadRawFile } from 'element-plus'
+import { genFileId } from 'tams-ui'
+import type { UploadInstance, UploadProps, UploadRawFile } from 'tams-ui'
 
 const upload = ref<UploadInstance>()
 

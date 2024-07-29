@@ -8,7 +8,7 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@tams-ui/hooks'
 import { teleportProps } from './teleport'
 import type { StyleValue } from 'vue'
 

@@ -16,7 +16,7 @@
     <p class="mt-1">
       Made with ❤️ by
       <a
-        href="https://github.com/element-plus"
+        href="https://github.com/tams-ui"
         target="_blank"
         rel="noopener noreferer"
         >Element Plus</a

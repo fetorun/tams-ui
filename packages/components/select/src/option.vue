@@ -27,7 +27,7 @@ import {
   toRefs,
   unref,
 } from 'vue'
-import { useId, useNamespace } from '@element-plus/hooks'
+import { useId, useNamespace } from '@tams-ui/hooks'
 import { useOption } from './useOption'
 import type { SelectOptionProxy } from './token'
 

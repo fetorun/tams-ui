@@ -15,7 +15,7 @@
 <script lang="ts" setup>
 import { computed, onMounted, provide, ref, watch } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@tams-ui/hooks'
 import {
   animateScrollTo,
   getElement,
@@ -25,7 +25,7 @@ import {
   isUndefined,
   isWindow,
   throttleByRaf,
-} from '@element-plus/utils'
+} from '@tams-ui/utils'
 import { anchorEmits, anchorProps } from './anchor'
 import { anchorKey } from './constants'
 

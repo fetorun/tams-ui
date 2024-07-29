@@ -15,8 +15,8 @@ import {
 
 import { useResizeObserver } from '@vueuse/core'
 import { isNil } from 'lodash-unified'
-import ElIcon from '@element-plus/components/icon'
 import { More } from '@element-plus/icons-vue'
+import ElIcon from '@tams-ui/components/icon'
 import {
   buildProps,
   definePropType,
@@ -25,9 +25,9 @@ import {
   isObject,
   isString,
   mutable,
-} from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
-import { ClickOutside as vClickoutside } from '@element-plus/directives'
+} from '@tams-ui/utils'
+import { useNamespace } from '@tams-ui/hooks'
+import { ClickOutside as vClickoutside } from '@tams-ui/directives'
 import Menubar from './utils/menu-bar'
 import ElMenuCollapseTransition from './menu-collapse-transition.vue'
 import ElSubMenu from './sub-menu'

@@ -10,9 +10,9 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { useFormSize } from '@element-plus/components/form'
-import { isUndefined } from '@element-plus/utils'
+import { useNamespace } from '@tams-ui/hooks'
+import { useFormSize } from '@tams-ui/components/form'
+import { isUndefined } from '@tams-ui/utils'
 import { textProps } from './text'
 
 defineOptions({

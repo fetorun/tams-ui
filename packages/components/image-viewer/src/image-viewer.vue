@@ -86,10 +86,6 @@ import {
 } from 'vue'
 import { useEventListener } from '@vueuse/core'
 import { throttle } from 'lodash-unified'
-import { useLocale, useNamespace, useZIndex } from '@element-plus/hooks'
-import { EVENT_CODE } from '@element-plus/constants'
-import { keysOf } from '@element-plus/utils'
-import ElIcon from '@element-plus/components/icon'
 import {
   ArrowLeft,
   ArrowRight,
@@ -101,6 +97,10 @@ import {
   ZoomIn,
   ZoomOut,
 } from '@element-plus/icons-vue'
+import { useLocale, useNamespace, useZIndex } from '@tams-ui/hooks'
+import { EVENT_CODE } from '@tams-ui/constants'
+import { keysOf } from '@tams-ui/utils'
+import ElIcon from '@tams-ui/components/icon'
 import { imageViewerEmits, imageViewerProps } from './image-viewer'
 
 import type { CSSProperties } from 'vue'

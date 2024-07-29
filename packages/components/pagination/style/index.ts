@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/pagination.scss'
-import '@element-plus/components/select/style'
+import '@tams-ui/components/base/style'
+import '@tams-ui/theme-chalk/src/pagination.scss'
+import '@tams-ui/components/select/style'

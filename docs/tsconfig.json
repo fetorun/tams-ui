@@ -12,7 +12,7 @@
     "skipLibCheck": true,
     "lib": ["WebWorker"],
     "paths": {
-      "element-plus": ["../packages/element-plus"],
+      "tams-ui": ["../packages/tams-ui"],
       "~/*": ["./.vitepress/vitepress/*"]
     },
     "types": ["../typings/components"],

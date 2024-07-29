@@ -1,7 +1,7 @@
 import { defineComponent, inject } from 'vue'
 import { isArray } from '@vue/shared'
 import { isEqual } from 'lodash-unified'
-import { isFunction, isString } from '@element-plus/utils'
+import { isFunction, isString } from '@tams-ui/utils'
 import { selectKey } from './token'
 import type { Component, VNode, VNodeNormalizedChildren } from 'vue'
 

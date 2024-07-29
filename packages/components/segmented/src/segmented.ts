@@ -1,11 +1,6 @@
-import {
-  buildProps,
-  definePropType,
-  isNumber,
-  isString,
-} from '@element-plus/utils'
-import { useAriaProps, useSizeProp } from '@element-plus/hooks'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { buildProps, definePropType, isNumber, isString } from '@tams-ui/utils'
+import { useAriaProps, useSizeProp } from '@tams-ui/hooks'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tams-ui/constants'
 
 import type { Option } from './types'
 import type { ExtractPropTypes } from 'vue'

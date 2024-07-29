@@ -1,11 +1,11 @@
 // @ts-nocheck
 import { computed, nextTick, toRefs, watch } from 'vue'
 import { pick } from 'lodash-unified'
-import ElSelect from '@element-plus/components/select'
-import { useNamespace } from '@element-plus/hooks'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import ElSelect from '@tams-ui/components/select'
+import { useNamespace } from '@tams-ui/hooks'
+import { UPDATE_MODEL_EVENT } from '@tams-ui/constants'
 import type { Ref } from 'vue'
-import type ElTree from '@element-plus/components/tree'
+import type ElTree from '@tams-ui/components/tree'
 
 export const useSelect = (
   props,
@@ -41,7 +41,7 @@ export const useSelect = (
     ...attrs,
     // attrs is not reactive, when v-model binding source changes,
     // this listener is still old, see the bug(or test 'v-model source change'):
-    // https://github.com/element-plus/element-plus/issues/14204
+    // https://github.com/tams-ui/tams-ui/issues/14204
     'onUpdate:modelValue': (value) => emit(UPDATE_MODEL_EVENT, value),
     valueKey: key,
     popperClass: computed(() => {

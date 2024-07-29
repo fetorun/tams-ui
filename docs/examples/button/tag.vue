@@ -4,7 +4,7 @@
   <el-button
     type="primary"
     tag="a"
-    href="https://github.com/element-plus/element-plus"
+    href="https://github.com/tams-ui/tams-ui"
     target="_blank"
     rel="noopener noreferrer"
   >

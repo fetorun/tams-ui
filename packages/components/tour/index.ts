@@ -1,4 +1,4 @@
-import { withInstall, withNoopInstall } from '@element-plus/utils'
+import { withInstall, withNoopInstall } from '@tams-ui/utils'
 import Tour from './src/tour.vue'
 import TourStep from './src/step.vue'
 

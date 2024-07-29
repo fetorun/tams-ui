@@ -106,7 +106,6 @@
 </template>
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
 import {
   Check,
   CircleCheck,
@@ -115,9 +114,10 @@ import {
   Document,
   ZoomIn,
 } from '@element-plus/icons-vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import ElProgress from '@element-plus/components/progress'
-import { useFormDisabled } from '@element-plus/components/form'
+import { ElIcon } from '@tams-ui/components/icon'
+import { useLocale, useNamespace } from '@tams-ui/hooks'
+import ElProgress from '@tams-ui/components/progress'
+import { useFormDisabled } from '@tams-ui/components/form'
 
 import { uploadListEmits, uploadListProps } from './upload-list'
 import type { UploadFile } from './upload'

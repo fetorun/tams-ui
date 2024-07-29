@@ -10,9 +10,9 @@
 </template>
 <script lang="ts" setup>
 import { inject, ref } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { useFormDisabled } from '@element-plus/components/form'
-import { throwError } from '@element-plus/utils/error'
+import { useNamespace } from '@tams-ui/hooks'
+import { useFormDisabled } from '@tams-ui/components/form'
+import { throwError } from '@tams-ui/utils/error'
 import { uploadContextKey } from './constants'
 import { uploadDraggerEmits, uploadDraggerProps } from './upload-dragger'
 

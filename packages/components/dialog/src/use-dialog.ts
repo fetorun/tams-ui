@@ -14,10 +14,10 @@ import {
   useId,
   useLockscreen,
   useZIndex,
-} from '@element-plus/hooks'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { addUnit, isClient } from '@element-plus/utils'
-import { useGlobalConfig } from '@element-plus/components/config-provider'
+} from '@tams-ui/hooks'
+import { UPDATE_MODEL_EVENT } from '@tams-ui/constants'
+import { addUnit, isClient } from '@tams-ui/utils'
+import { useGlobalConfig } from '@tams-ui/components/config-provider'
 
 import type { CSSProperties, Ref, SetupContext } from 'vue'
 import type { DialogEmits, DialogProps } from './dialog'

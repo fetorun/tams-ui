@@ -30,8 +30,8 @@
 
 <script lang="ts" setup>
 import { nextTick, ref } from 'vue'
-import { ElSelectV2 } from 'element-plus'
-import type { CheckboxValueType } from 'element-plus'
+import { ElSelectV2 } from 'tams-ui'
+import type { CheckboxValueType } from 'tams-ui'
 
 const initials = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 const select = ref<InstanceType<typeof ElSelectV2>>()

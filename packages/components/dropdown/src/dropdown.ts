@@ -1,17 +1,17 @@
 // @ts-nocheck
-import { buildProps, definePropType, iconPropType } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
-import { createCollectionWithScope } from '@element-plus/components/collection'
+import { buildProps, definePropType, iconPropType } from '@tams-ui/utils'
+import { EVENT_CODE } from '@tams-ui/constants'
+import { createCollectionWithScope } from '@tams-ui/components/collection'
 import {
   useTooltipContentProps,
   useTooltipTriggerProps,
-} from '@element-plus/components/tooltip'
+} from '@tams-ui/components/tooltip'
 
 import type { Options } from '@popperjs/core'
-import type { ButtonProps, ButtonType } from '@element-plus/components/button'
-import type { Placement } from '@element-plus/components/popper'
+import type { ButtonProps, ButtonType } from '@tams-ui/components/button'
+import type { Placement } from '@tams-ui/components/popper'
 import type { ComponentInternalInstance, ComputedRef } from 'vue'
-import type { Nullable } from '@element-plus/utils'
+import type { Nullable } from '@tams-ui/utils'
 
 export interface IElDropdownInstance {
   instance?: ComponentInternalInstance

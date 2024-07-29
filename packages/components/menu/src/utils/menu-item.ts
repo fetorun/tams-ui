@@ -1,6 +1,6 @@
 // @ts-nocheck
-import { triggerEvent } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+import { triggerEvent } from '@tams-ui/utils'
+import { EVENT_CODE } from '@tams-ui/constants'
 import SubMenu from './submenu'
 
 class MenuItem {

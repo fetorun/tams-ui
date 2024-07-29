@@ -6,8 +6,8 @@ import {
   shallowRef,
   watch,
 } from 'vue'
-import { addUnit, getClientXY } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { addUnit, getClientXY } from '@tams-ui/utils'
+import { useNamespace } from '@tams-ui/hooks'
 import { draggable } from '../utils/draggable'
 
 import type { AlphaSliderProps } from '../props/alpha-slider'

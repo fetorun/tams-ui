@@ -1,4 +1,4 @@
-import { buildProps } from '@element-plus/utils'
+import { buildProps } from '@tams-ui/utils'
 import type { ExtractPropTypes } from 'vue'
 import type Row from './row.vue'
 

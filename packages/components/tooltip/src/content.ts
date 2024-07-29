@@ -1,6 +1,6 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import { popperContentProps } from '@element-plus/components/popper'
-import { useAriaProps, useDelayedToggleProps } from '@element-plus/hooks'
+import { buildProps, definePropType } from '@tams-ui/utils'
+import { popperContentProps } from '@tams-ui/components/popper'
+import { useAriaProps, useDelayedToggleProps } from '@tams-ui/hooks'
 
 import type TooltipContent from './content.vue'
 import type { ExtractPropTypes } from 'vue'

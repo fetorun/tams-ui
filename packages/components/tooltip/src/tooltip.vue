@@ -58,19 +58,15 @@ import {
   unref,
   watch,
 } from 'vue'
-import { ElPopper, ElPopperArrow } from '@element-plus/components/popper'
+import { ElPopper, ElPopperArrow } from '@tams-ui/components/popper'
 
-import { isBoolean } from '@element-plus/utils'
-import {
-  useDelayedToggle,
-  useId,
-  usePopperContainer,
-} from '@element-plus/hooks'
+import { isBoolean } from '@tams-ui/utils'
+import { useDelayedToggle, useId, usePopperContainer } from '@tams-ui/hooks'
 import { TOOLTIP_INJECTION_KEY } from './constants'
 import { tooltipEmits, useTooltipModelToggle, useTooltipProps } from './tooltip'
 import ElTooltipTrigger from './trigger.vue'
 import ElTooltipContent from './content.vue'
-import type { PopperInstance } from '@element-plus/components/popper'
+import type { PopperInstance } from '@tams-ui/components/popper'
 
 defineOptions({
   name: 'ElTooltip',

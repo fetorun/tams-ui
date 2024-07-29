@@ -1,4 +1,4 @@
-import { isClient } from '@element-plus/utils'
+import { isClient } from '@tams-ui/utils'
 
 let isDragging = false
 

@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/descriptions.scss'
-import '@element-plus/components/descriptions-item/style'
+import '@tams-ui/components/base/style'
+import '@tams-ui/theme-chalk/src/descriptions.scss'
+import '@tams-ui/components/descriptions-item/style'

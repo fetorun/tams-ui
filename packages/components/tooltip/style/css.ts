@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-tooltip.css'
-import '@element-plus/components/popper/style/css'
+import '@tams-ui/components/base/style/css'
+import '@tams-ui/theme-chalk/el-tooltip.css'
+import '@tams-ui/components/popper/style/css'

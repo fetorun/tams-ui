@@ -12,7 +12,7 @@ import FigmaVariablesSvg from './resources/figma-variables-svg.vue'
 import FigmaUiKitSvg from './resources/figma-ui-kit-svg.vue'
 import MasterGoUiKitSvg from './resources/master-go-ui-kit-svg.vue'
 
-const mirrorUrl = 'element-plus.gitee.io'
+const mirrorUrl = 'tams-ui.gitee.io'
 const isMirrorUrl = () => {
   if (!isClient) return
   return window.location.hostname === mirrorUrl
@@ -26,9 +26,9 @@ const resourceUrl = {
   },
   gitee: {
     sketch:
-      'https://gitee.com/element-plus/resources/raw/master/Element_Plus_Design_System_2022_1.0_Beta.zip',
+      'https://gitee.com/tams-ui/resources/raw/master/Element_Plus_Design_System_2022_1.0_Beta.zip',
     axure:
-      'https://gitee.com/element-plus/resources/raw/master/Element_Components_v2.1.0.rplib',
+      'https://gitee.com/tams-ui/resources/raw/master/Element_Components_v2.1.0.rplib',
   },
 }[isMirrorUrl() ? 'gitee' : 'github']
 

@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { TableInstance } from 'element-plus'
+import type { TableInstance } from 'tams-ui'
 
 const tableLayout = ref<TableInstance['tableLayout']>('fixed')
 

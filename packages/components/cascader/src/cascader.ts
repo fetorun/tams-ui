@@ -1,13 +1,13 @@
-import { CommonProps } from '@element-plus/components/cascader-panel'
-import { buildProps, definePropType, isBoolean } from '@element-plus/utils'
-import { useEmptyValuesProps, useSizeProp } from '@element-plus/hooks'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
-import { tagProps } from '@element-plus/components/tag'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { CommonProps } from '@tams-ui/components/cascader-panel'
+import { buildProps, definePropType, isBoolean } from '@tams-ui/utils'
+import { useEmptyValuesProps, useSizeProp } from '@tams-ui/hooks'
+import { useTooltipContentProps } from '@tams-ui/components/tooltip'
+import { tagProps } from '@tams-ui/components/tag'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tams-ui/constants'
 import type {
   CascaderNode,
   CascaderValue,
-} from '@element-plus/components/cascader-panel'
+} from '@tams-ui/components/cascader-panel'
 
 export const cascaderProps = buildProps({
   ...CommonProps,

@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-slider.css'
-import '@element-plus/components/input-number/style/css'
-import '@element-plus/components/tooltip/style/css'
+import '@tams-ui/components/base/style/css'
+import '@tams-ui/theme-chalk/el-slider.css'
+import '@tams-ui/components/input-number/style/css'
+import '@tams-ui/components/tooltip/style/css'

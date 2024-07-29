@@ -9,8 +9,8 @@
 <script lang="ts" setup>
 import { getCurrentInstance, inject, nextTick, ref, watch } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
-import { capitalize, throwError } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { capitalize, throwError } from '@tams-ui/utils'
+import { useNamespace } from '@tams-ui/hooks'
 import { tabsRootContextKey } from './constants'
 import { tabBarProps } from './tab-bar'
 

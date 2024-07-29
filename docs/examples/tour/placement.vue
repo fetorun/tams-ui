@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { ButtonInstance } from 'element-plus'
+import type { ButtonInstance } from 'tams-ui'
 
 const btnRef = ref<ButtonInstance>()
 

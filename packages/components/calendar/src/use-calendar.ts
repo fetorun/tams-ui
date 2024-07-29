@@ -1,8 +1,8 @@
 import { computed, ref } from 'vue'
 import dayjs from 'dayjs'
-import { useLocale } from '@element-plus/hooks'
-import { debugWarn } from '@element-plus/utils'
-import { INPUT_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { useLocale } from '@tams-ui/hooks'
+import { debugWarn } from '@tams-ui/utils'
+import { INPUT_EVENT, UPDATE_MODEL_EVENT } from '@tams-ui/constants'
 
 import type { ComputedRef, SetupContext } from 'vue'
 import type { Dayjs } from 'dayjs'
@@ -116,7 +116,7 @@ export const useCalendar = (
   const prevYearDayjs = computed(() => date.value.subtract(1, 'year').date(1))
   const nextYearDayjs = computed(() => date.value.add(1, 'year').date(1))
 
-  // https://github.com/element-plus/element-plus/issues/3155
+  // https://github.com/tams-ui/tams-ui/issues/3155
   // Calculate the validate date range according to the start and end dates
   const calculateValidatedDateRange = (
     startDayjs: Dayjs,

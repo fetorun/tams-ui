@@ -33,15 +33,15 @@
 <script lang="ts" setup>
 import { computed, reactive, ref, watch } from 'vue'
 import { useActiveElement, useResizeObserver } from '@vueuse/core'
-import { useId, useNamespace } from '@element-plus/hooks'
+import { useId, useNamespace } from '@tams-ui/hooks'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
-import { debugWarn, isObject } from '@element-plus/utils'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+} from '@tams-ui/components/form'
+import { debugWarn, isObject } from '@tams-ui/utils'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tams-ui/constants'
 import { segmentedEmits, segmentedProps } from './segmented'
 import type { Option } from './types'
 

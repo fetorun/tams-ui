@@ -117,26 +117,26 @@ import {
   watch,
 } from 'vue'
 import { debounce } from 'lodash-unified'
-import { ElButton } from '@element-plus/components/button'
-import { ElIcon } from '@element-plus/components/icon'
-import { ClickOutside as vClickOutside } from '@element-plus/directives'
-import { ElTooltip } from '@element-plus/components/tooltip'
-import { ElInput } from '@element-plus/components/input'
+import { ArrowDown, Close } from '@element-plus/icons-vue'
+import { ElButton } from '@tams-ui/components/button'
+import { ElIcon } from '@tams-ui/components/icon'
+import { ClickOutside as vClickOutside } from '@tams-ui/directives'
+import { ElTooltip } from '@tams-ui/components/tooltip'
+import { ElInput } from '@tams-ui/components/input'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
+} from '@tams-ui/components/form'
 import {
   useDeprecated,
   useFocusController,
   useLocale,
   useNamespace,
-} from '@element-plus/hooks'
-import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { debugWarn } from '@element-plus/utils'
-import { ArrowDown, Close } from '@element-plus/icons-vue'
+} from '@tams-ui/hooks'
+import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@tams-ui/constants'
+import { debugWarn } from '@tams-ui/utils'
 import AlphaSlider from './components/alpha-slider.vue'
 import HueSlider from './components/hue-slider.vue'
 import Predefine from './components/predefine.vue'
@@ -147,7 +147,7 @@ import {
   colorPickerEmits,
   colorPickerProps,
 } from './color-picker'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { TooltipInstance } from '@tams-ui/components/tooltip'
 
 defineOptions({
   name: 'ElColorPicker',
@@ -229,7 +229,7 @@ useDeprecated(
     replacement: 'aria-label',
     version: '2.8.0',
     scope: 'el-color-picker',
-    ref: 'https://element-plus.org/en-US/component/color-picker.html',
+    ref: 'https://tams-ui.org/en-US/component/color-picker.html',
   },
   computed(() => !!props.label)
 )

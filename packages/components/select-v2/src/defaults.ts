@@ -1,18 +1,14 @@
 import { placements } from '@popperjs/core'
-import {
-  useAriaProps,
-  useEmptyValuesProps,
-  useSizeProp,
-} from '@element-plus/hooks'
-import { buildProps, definePropType, iconPropType } from '@element-plus/utils'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
 import { CircleClose } from '@element-plus/icons-vue'
+import { useAriaProps, useEmptyValuesProps, useSizeProp } from '@tams-ui/hooks'
+import { buildProps, definePropType, iconPropType } from '@tams-ui/utils'
+import { useTooltipContentProps } from '@tams-ui/components/tooltip'
 import { tagProps } from '../../tag'
 import { defaultProps } from './useProps'
 
 import type { Option, OptionType } from './select.types'
 import type { Props } from './useProps'
-import type { Options, Placement } from '@element-plus/components/popper'
+import type { Options, Placement } from '@tams-ui/components/popper'
 
 export const SelectProps = buildProps({
   /**

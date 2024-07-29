@@ -12,7 +12,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@tams-ui/hooks'
 import { cardProps } from './card'
 
 defineOptions({

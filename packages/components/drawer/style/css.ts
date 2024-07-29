@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-drawer.css'
-import '@element-plus/components/overlay/style/css'
+import '@tams-ui/components/base/style/css'
+import '@tams-ui/theme-chalk/el-drawer.css'
+import '@tams-ui/components/overlay/style/css'

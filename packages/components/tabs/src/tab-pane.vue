@@ -25,8 +25,8 @@ import {
   watch,
 } from 'vue'
 import { eagerComputed } from '@vueuse/core'
-import { throwError } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { throwError } from '@tams-ui/utils'
+import { useNamespace } from '@tams-ui/hooks'
 import { tabsRootContextKey } from './constants'
 import { tabPaneProps } from './tab-pane'
 

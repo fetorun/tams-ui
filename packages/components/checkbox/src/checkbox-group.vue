@@ -16,10 +16,10 @@
 <script lang="ts" setup>
 import { computed, nextTick, provide, toRefs, watch } from 'vue'
 import { pick } from 'lodash-unified'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { debugWarn } from '@element-plus/utils'
-import { useDeprecated, useNamespace } from '@element-plus/hooks'
-import { useFormItem, useFormItemInputId } from '@element-plus/components/form'
+import { UPDATE_MODEL_EVENT } from '@tams-ui/constants'
+import { debugWarn } from '@tams-ui/utils'
+import { useDeprecated, useNamespace } from '@tams-ui/hooks'
+import { useFormItem, useFormItemInputId } from '@tams-ui/components/form'
 import { checkboxGroupEmits, checkboxGroupProps } from './checkbox-group'
 import { checkboxGroupContextKey } from './constants'
 
@@ -73,7 +73,7 @@ useDeprecated(
     replacement: 'aria-label',
     version: '2.8.0',
     scope: 'el-checkbox-group',
-    ref: 'https://element-plus.org/en-US/component/checkbox.html',
+    ref: 'https://tams-ui.org/en-US/component/checkbox.html',
   },
   computed(() => !!props.label)
 )

@@ -1,6 +1,6 @@
 import { defineComponent, ref, toRef } from 'vue'
-import Input from '@element-plus/components/input'
-import Button from '@element-plus/components/button'
+import Input from '@tams-ui/components/input'
+import Button from '@tams-ui/components/button'
 import Form from '../src/form.vue'
 import FormItem from '../src/form-item.vue'
 

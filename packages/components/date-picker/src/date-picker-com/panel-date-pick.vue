@@ -196,30 +196,25 @@ import {
   watch,
 } from 'vue'
 import dayjs from 'dayjs'
-import ElButton from '@element-plus/components/button'
-import { ClickOutside as vClickOutside } from '@element-plus/directives'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import ElInput from '@element-plus/components/input'
-import {
-  TimePickPanel,
-  extractDateFormat,
-  extractTimeFormat,
-} from '@element-plus/components/time-picker'
-import { ElIcon } from '@element-plus/components/icon'
-import {
-  isArray,
-  isFunction,
-  tamsNow,
-  tamsParseDate,
-} from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
 import {
   ArrowLeft,
   ArrowRight,
   DArrowLeft,
   DArrowRight,
 } from '@element-plus/icons-vue'
-import { TOOLTIP_INJECTION_KEY } from '@element-plus/components/tooltip'
+import ElButton from '@tams-ui/components/button'
+import { ClickOutside as vClickOutside } from '@tams-ui/directives'
+import { useLocale, useNamespace } from '@tams-ui/hooks'
+import ElInput from '@tams-ui/components/input'
+import {
+  TimePickPanel,
+  extractDateFormat,
+  extractTimeFormat,
+} from '@tams-ui/components/time-picker'
+import { ElIcon } from '@tams-ui/components/icon'
+import { isArray, isFunction, tamsNow, tamsParseDate } from '@tams-ui/utils'
+import { EVENT_CODE } from '@tams-ui/constants'
+import { TOOLTIP_INJECTION_KEY } from '@tams-ui/components/tooltip'
 import { panelDatePickProps } from '../props/panel-date-pick'
 import DateTable from './basic-date-table.vue'
 import MonthTable from './basic-month-table.vue'
@@ -329,7 +324,7 @@ const handleDatePick = async (value: DateTableEmits, keepOpen?: boolean) => {
     }
     innerDate.value = newDate
     emit(newDate, showTime.value || keepOpen)
-    // fix: https://github.com/element-plus/element-plus/issues/14728
+    // fix: https://github.com/tams-ui/tams-ui/issues/14728
     if (props.type === 'datetime') {
       await nextTick()
       handleFocusPicker()

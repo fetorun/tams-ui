@@ -108,24 +108,24 @@ import { computed, onMounted, ref, useAttrs as useRawAttrs } from 'vue'
 import { debounce } from 'lodash-unified'
 import { onClickOutside } from '@vueuse/core'
 import { Loading } from '@element-plus/icons-vue'
-import { useAttrs, useId, useNamespace } from '@element-plus/hooks'
-import { isArray, throwError } from '@element-plus/utils'
+import { useAttrs, useId, useNamespace } from '@tams-ui/hooks'
+import { isArray, throwError } from '@tams-ui/utils'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import ElInput from '@element-plus/components/input'
-import ElScrollbar from '@element-plus/components/scrollbar'
-import ElTooltip from '@element-plus/components/tooltip'
-import ElIcon from '@element-plus/components/icon'
-import { useFormDisabled } from '@element-plus/components/form'
+} from '@tams-ui/constants'
+import ElInput from '@tams-ui/components/input'
+import ElScrollbar from '@tams-ui/components/scrollbar'
+import ElTooltip from '@tams-ui/components/tooltip'
+import ElIcon from '@tams-ui/components/icon'
+import { useFormDisabled } from '@tams-ui/components/form'
 import { autocompleteEmits, autocompleteProps } from './autocomplete'
 import type { AutocompleteData } from './autocomplete'
 
 import type { StyleValue } from 'vue'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
-import type { InputInstance } from '@element-plus/components/input'
+import type { TooltipInstance } from '@tams-ui/components/tooltip'
+import type { InputInstance } from '@tams-ui/components/input'
 
 const COMPONENT_NAME = 'ElAutocomplete'
 defineOptions({

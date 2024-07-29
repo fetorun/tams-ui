@@ -1,9 +1,4 @@
-import {
-  buildProps,
-  definePropType,
-  isNumber,
-  mutable,
-} from '@element-plus/utils'
+import { buildProps, definePropType, isNumber, mutable } from '@tams-ui/utils'
 
 import type { ExtractPropTypes } from 'vue'
 
