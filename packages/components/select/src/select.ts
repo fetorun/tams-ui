@@ -3,8 +3,13 @@ import { ArrowDown, CircleClose } from '@element-plus/icons-vue'
 import { useAriaProps, useEmptyValuesProps, useSizeProp } from '@tams-ui/hooks'
 import { buildProps, definePropType, iconPropType } from '@tams-ui/utils'
 import { useTooltipContentProps } from '@tams-ui/components/tooltip'
+
 import { tagProps } from '@tams-ui/components/tag'
-import type { Options, Placement } from '@tams-ui/components/popper'
+import type {
+  Options,
+  Placement,
+  PopperEffect,
+} from '@tams-ui/components/popper'
 
 export const SelectProps = buildProps({
   /**
@@ -41,7 +46,7 @@ export const SelectProps = buildProps({
    * @description tooltip theme, built-in theme: `dark` / `light`
    */
   effect: {
-    type: definePropType<'light' | 'dark' | string>(String),
+    type: definePropType<PopperEffect>(String),
     default: 'light',
   },
   /**

@@ -8,7 +8,11 @@ import { defaultProps } from './useProps'
 
 import type { Option, OptionType } from './select.types'
 import type { Props } from './useProps'
-import type { Options, Placement } from '@tams-ui/components/popper'
+import type {
+  Options,
+  Placement,
+  PopperEffect,
+} from '@tams-ui/components/popper'
 
 export const SelectProps = buildProps({
   /**
@@ -41,7 +45,7 @@ export const SelectProps = buildProps({
    * @description tooltip theme, built-in theme: `dark` / `light`
    */
   effect: {
-    type: definePropType<'light' | 'dark' | string>(String),
+    type: definePropType<PopperEffect>(String),
     default: 'light',
   },
   /**

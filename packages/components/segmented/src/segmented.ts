@@ -1,4 +1,10 @@
-import { buildProps, definePropType, isNumber, isString } from '@tams-ui/utils'
+import {
+  buildProps,
+  definePropType,
+  isBoolean,
+  isNumber,
+  isString,
+} from '@tams-ui/utils'
 import { useAriaProps, useSizeProp } from '@tams-ui/hooks'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tams-ui/constants'
 
@@ -54,8 +60,10 @@ export const segmentedProps = buildProps({
 export type SegmentedProps = ExtractPropTypes<typeof segmentedProps>
 
 export const segmentedEmits = {
-  [UPDATE_MODEL_EVENT]: (val: any) => isString(val) || isNumber(val),
-  [CHANGE_EVENT]: (val: any) => isString(val) || isNumber(val),
+  [UPDATE_MODEL_EVENT]: (val: any) =>
+    isString(val) || isNumber(val) || isBoolean(val),
+  [CHANGE_EVENT]: (val: any) =>
+    isString(val) || isNumber(val) || isBoolean(val),
 }
 export type SegmentedEmits = typeof segmentedEmits
 

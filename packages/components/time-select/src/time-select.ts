@@ -1,8 +1,9 @@
 import { CircleClose, Clock } from '@element-plus/icons-vue'
-import { buildProps, definePropType } from '@tams-ui/utils'
 import { useEmptyValuesProps, useSizeProp } from '@tams-ui/hooks'
+import { buildProps, definePropType } from '@tams-ui/utils'
+import type { PopperEffect } from '@tams-ui/components/popper'
 import type TimeSelect from './time-select.vue'
-import type { Component, ExtractPropTypes, PropType } from 'vue'
+import type { Component, ExtractPropTypes } from 'vue'
 
 export const timeSelectProps = buildProps({
   /**
@@ -31,7 +32,7 @@ export const timeSelectProps = buildProps({
    * @description Tooltip theme, built-in theme: `dark` / `light`
    */
   effect: {
-    type: String as PropType<'light' | 'dark' | string>,
+    type: definePropType<PopperEffect>(String),
     default: 'light',
   },
   /**

@@ -1,5 +1,4 @@
 import '@tams-ui/components/base/style'
-import '@tams-ui/components/input/style'
 import '@tams-ui/components/tag/style'
 import '@tams-ui/components/option/style'
 import '@tams-ui/components/option-group/style'

@@ -24,34 +24,58 @@ import TabNav from './tab-nav'
 
 import type { TabNavInstance } from './tab-nav'
 import type { TabsPaneContext } from './constants'
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, FunctionalComponent, VNode } from 'vue'
 import type { Awaitable } from '@tams-ui/utils'
 
 export type TabPaneName = string | number
 
 export const tabsProps = buildProps({
+  /**
+   * @description type of Tab
+   */
   type: {
     type: String,
     values: ['card', 'border-card', ''],
     default: '',
   },
+  /**
+   * @description whether Tab is closable
+   */
   closable: Boolean,
+  /**
+   * @description whether Tab is addable
+   */
   addable: Boolean,
+  /**
+   * @description binding value, name of the selected tab
+   */
   modelValue: {
     type: [String, Number],
   },
+  /**
+   * @description whether Tab is addable and closable
+   */
   editable: Boolean,
+  /**
+   * @description position of tabs
+   */
   tabPosition: {
     type: String,
     values: ['top', 'right', 'bottom', 'left'],
     default: 'top',
   },
+  /**
+   * @description hook function before switching tab. If `false` is returned or a `Promise` is returned and then is rejected, switching will be prevented
+   */
   beforeLeave: {
     type: definePropType<
       (newName: TabPaneName, oldName: TabPaneName) => Awaitable<void | boolean>
     >(Function),
     default: () => true,
   },
+  /**
+   * @description whether width of tab automatically fits its container
+   */
   stretch: Boolean,
 } as const)
 export type TabsProps = ExtractPropTypes<typeof tabsProps>
@@ -87,7 +111,7 @@ const Tabs = defineComponent({
 
     const {
       children: panes,
-      addChild: registerPane,
+      addChild: sortPane,
       removeChild: unregisterPane,
     } = useOrderedChildren<TabsPaneContext>(getCurrentInstance()!, 'ElTabPane')
 
@@ -147,14 +171,21 @@ const Tabs = defineComponent({
     provide(tabsRootContextKey, {
       props,
       currentName,
-      registerPane,
+      registerPane: (pane: TabsPaneContext) => {
+        panes.value.push(pane)
+      },
+      sortPane,
       unregisterPane,
     })
 
     expose({
       currentName,
     })
-
+    const TabNavRenderer: FunctionalComponent<{ render: () => VNode }> = ({
+      render,
+    }) => {
+      return render()
+    }
     return () => {
       const addSlot = slots['add-icon']
       const newButton =
@@ -188,15 +219,19 @@ const Tabs = defineComponent({
             ns.is(props.tabPosition),
           ]}
         >
-          <TabNav
-            ref={nav$}
-            currentName={currentName.value}
-            editable={props.editable}
-            type={props.type}
-            panes={panes.value}
-            stretch={props.stretch}
-            onTabClick={handleTabClick}
-            onTabRemove={handleTabRemove}
+          <TabNavRenderer
+            render={() => (
+              <TabNav
+                ref={nav$}
+                currentName={currentName.value}
+                editable={props.editable}
+                type={props.type}
+                panes={panes.value}
+                stretch={props.stretch}
+                onTabClick={handleTabClick}
+                onTabRemove={handleTabRemove}
+              />
+            )}
           />
           {newButton}
         </div>
@@ -217,9 +252,8 @@ const Tabs = defineComponent({
             },
           ]}
         >
-          {...props.tabPosition !== 'bottom'
-            ? [header, panels]
-            : [panels, header]}
+          {panels}
+          {header}
         </div>
       )
     }

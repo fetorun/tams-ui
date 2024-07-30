@@ -293,7 +293,6 @@
 // @ts-nocheck
 import { defineComponent, provide, reactive } from 'vue'
 import { ClickOutside } from '@tams-ui/directives'
-import ElInput from '@tams-ui/components/input'
 import ElTooltip from '@tams-ui/components/tooltip'
 import ElScrollbar from '@tams-ui/components/scrollbar'
 import ElTag from '@tams-ui/components/tag'
@@ -313,7 +312,6 @@ export default defineComponent({
   name: COMPONENT_NAME,
   componentName: COMPONENT_NAME,
   components: {
-    ElInput,
     ElSelectMenu,
     ElOption,
     ElOptions,

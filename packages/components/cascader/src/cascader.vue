@@ -201,7 +201,6 @@ import { computed, nextTick, onMounted, ref, useAttrs, watch } from 'vue'
 import { isPromise } from '@vue/shared'
 import { cloneDeep, debounce } from 'lodash-unified'
 import { useCssVar, useResizeObserver } from '@vueuse/core'
-import { ArrowDown, Check, CircleClose } from '@element-plus/icons-vue'
 import ElCascaderPanel from '@tams-ui/components/cascader-panel'
 import ElInput from '@tams-ui/components/input'
 import ElTooltip from '@tams-ui/components/tooltip'
@@ -210,14 +209,13 @@ import ElTag from '@tams-ui/components/tag'
 import ElIcon from '@tams-ui/components/icon'
 import { useFormItem, useFormSize } from '@tams-ui/components/form'
 import { ClickOutside as vClickoutside } from '@tams-ui/directives'
-import { useEmptyValues, useLocale, useNamespace } from '@tams-ui/hooks'
 import {
-  debugWarn,
-  focusNode,
-  getSibling,
-  isClient,
-  isKorean,
-} from '@tams-ui/utils'
+  useComposition,
+  useEmptyValues,
+  useLocale,
+  useNamespace,
+} from '@tams-ui/hooks'
+import { debugWarn, focusNode, getSibling, isClient } from '@tams-ui/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
@@ -271,6 +269,12 @@ const nsInput = useNamespace('input')
 const { t } = useLocale()
 const { form, formItem } = useFormItem()
 const { valueOnClear } = useEmptyValues(props)
+const { isComposing, handleComposition } = useComposition({
+  afterComposition(event) {
+    const text = (event.target as HTMLInputElement)?.value
+    handleInput(text)
+  },
+})
 
 const tooltipRef: Ref<TooltipInstance | null> = ref(null)
 const input: Ref<InputInstance | null> = ref(null)
@@ -286,7 +290,6 @@ const searchInputValue = ref('')
 const presentTags: Ref<Tag[]> = ref([])
 const allPresentTags: Ref<Tag[]> = ref([])
 const suggestions: Ref<CascaderNode[]> = ref([])
-const isOnComposition = ref(false)
 
 const cascaderStyle = computed<StyleValue>(() => {
   return attrs.style as StyleValue
@@ -297,9 +300,7 @@ const inputPlaceholder = computed(
   () => props.placeholder || t('el.cascader.placeholder')
 )
 const currentPlaceholder = computed(() =>
-  searchInputValue.value ||
-  presentTags.value.length > 0 ||
-  isOnComposition.value
+  searchInputValue.value || presentTags.value.length > 0 || isComposing.value
     ? ''
     : inputPlaceholder.value
 )
@@ -343,7 +344,8 @@ const checkedValue = computed<CascaderValue>({
     return cloneDeep(props.modelValue) as CascaderValue
   },
   set(val) {
-    const value = val || valueOnClear.value
+    // https://github.com/tams-ui/tams-ui/issues/17647
+    const value = val ?? valueOnClear.value
     emit(UPDATE_MODEL_EVENT, value)
     emit(CHANGE_EVENT, value)
     if (props.validateEvent) {
@@ -537,19 +539,8 @@ const handleExpandChange = (value: CascaderValue) => {
   emit('expandChange', value)
 }
 
-const handleComposition = (event: CompositionEvent) => {
-  const text = (event.target as HTMLInputElement)?.value
-  if (event.type === 'compositionend') {
-    isOnComposition.value = false
-    nextTick(() => handleInput(text))
-  } else {
-    const lastCharacter = text[text.length - 1] || ''
-    isOnComposition.value = !isKorean(lastCharacter)
-  }
-}
-
 const handleKeyDown = (e: KeyboardEvent) => {
-  if (isOnComposition.value) return
+  if (isComposing.value) return
 
   switch (e.code) {
     case EVENT_CODE.enter:
