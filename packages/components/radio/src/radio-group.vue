@@ -4,9 +4,7 @@
     ref="radioGroupRef"
     :class="ns.b('group')"
     role="radiogroup"
-    :aria-label="
-      !isLabeledByFormItem ? label || ariaLabel || 'radio-group' : undefined
-    "
+    :aria-label="!isLabeledByFormItem ? ariaLabel || 'radio-group' : undefined"
     :aria-labelledby="isLabeledByFormItem ? formItem!.labelId : undefined"
   >
     <slot />
@@ -26,7 +24,7 @@ import {
 } from 'vue'
 import { useFormItem, useFormItemInputId } from '@tams-ui/components/form'
 import { UPDATE_MODEL_EVENT } from '@tams-ui/constants'
-import { useDeprecated, useId, useNamespace } from '@tams-ui/hooks'
+import { useId, useNamespace } from '@tams-ui/hooks'
 import { debugWarn } from '@tams-ui/utils'
 import { radioGroupEmits, radioGroupProps } from './radio-group'
 import { radioGroupKey } from './constants'
@@ -82,16 +80,5 @@ watch(
       formItem?.validate('change').catch((err) => debugWarn(err))
     }
   }
-)
-
-useDeprecated(
-  {
-    from: 'label',
-    replacement: 'aria-label',
-    version: '2.8.0',
-    scope: 'el-radio-group',
-    ref: 'https://tams-ui.org/en-US/component/radio.html',
-  },
-  computed(() => !!props.label)
 )
 </script>

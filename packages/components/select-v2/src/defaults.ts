@@ -1,13 +1,21 @@
 import { placements } from '@popperjs/core'
 import { CircleClose } from '@element-plus/icons-vue'
 import { useAriaProps, useEmptyValuesProps, useSizeProp } from '@tams-ui/hooks'
-import { buildProps, definePropType, iconPropType } from '@tams-ui/utils'
+import {
+  buildProps,
+  definePropType,
+  iconPropType,
+  isNumber,
+} from '@tams-ui/utils'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tams-ui/constants'
 import { useTooltipContentProps } from '@tams-ui/components/tooltip'
 import { tagProps } from '../../tag'
 import { defaultProps } from './useProps'
 
 import type { Option, OptionType } from './select.types'
 import type { Props } from './useProps'
+import type { EmitFn } from '@tams-ui/utils/vue/typescript'
+import type { ExtractPropTypes } from 'vue'
 import type {
   Options,
   Placement,
@@ -45,7 +53,7 @@ export const SelectProps = buildProps({
    * @description tooltip theme, built-in theme: `dark` / `light`
    */
   effect: {
-    type: definePropType<PopperEffect>(String),
+    type: definePropType<PopperEffect | string>(String),
     default: 'light',
   },
   /**
@@ -265,3 +273,24 @@ export const OptionProps = buildProps({
   selected: Boolean,
   created: Boolean,
 } as const)
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
+export const selectEmits = {
+  [UPDATE_MODEL_EVENT]: (val: ISelectV2Props['modelValue']) => true,
+  [CHANGE_EVENT]: (val: ISelectV2Props['modelValue']) => true,
+  'remove-tag': (val: unknown) => true,
+  'visible-change': (visible: boolean) => true,
+  focus: (evt: FocusEvent) => evt instanceof FocusEvent,
+  blur: (evt: FocusEvent) => evt instanceof FocusEvent,
+  clear: () => true,
+}
+export const optionEmits = {
+  hover: (index?: number) => isNumber(index),
+  select: (val: Option, index?: number) => true,
+}
+/* eslint-enable @typescript-eslint/no-unused-vars */
+
+export type ISelectV2Props = ExtractPropTypes<typeof SelectProps>
+export type IOptionV2Props = ExtractPropTypes<typeof OptionProps>
+export type SelectEmitFn = EmitFn<typeof selectEmits>
+export type OptionEmitFn = EmitFn<typeof optionEmits>

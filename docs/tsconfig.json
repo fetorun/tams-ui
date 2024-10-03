@@ -15,7 +15,7 @@
       "tams-ui": ["../packages/tams-ui"],
       "~/*": ["./.vitepress/vitepress/*"]
     },
-    "types": ["../typings/components"],
+    "types": ["../typings/global"],
     "jsx": "preserve"
   },
   "include": ["**/*", ".vitepress/**/*"],

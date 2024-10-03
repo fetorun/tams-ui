@@ -1,6 +1,11 @@
 import { computed, getCurrentInstance, onMounted, watch } from 'vue'
-import { isFunction } from '@vue/shared'
-import { buildProp, definePropType, isBoolean, isClient } from '@tams-ui/utils'
+import {
+  buildProp,
+  definePropType,
+  isBoolean,
+  isClient,
+  isFunction,
+} from '@tams-ui/utils'
 import type { ExtractPropType } from '@tams-ui/utils'
 import type { RouteLocationNormalizedLoaded } from 'vue-router'
 

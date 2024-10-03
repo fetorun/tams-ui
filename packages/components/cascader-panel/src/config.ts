@@ -1,6 +1,5 @@
 import { computed } from 'vue'
-import { NOOP } from '@vue/shared'
-import { buildProps, definePropType } from '@tams-ui/utils'
+import { NOOP, buildProps, definePropType } from '@tams-ui/utils'
 import type {
   CascaderConfig,
   CascaderOption,

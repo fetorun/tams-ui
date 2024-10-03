@@ -1,15 +1,11 @@
+import { withInstall } from '@tams-ui/utils'
 import CascaderPanel from './src/index.vue'
-import type { App } from 'vue'
 import type { SFCWithInstall } from '@tams-ui/utils'
 
-CascaderPanel.install = (app: App): void => {
-  app.component(CascaderPanel.name!, CascaderPanel)
-}
+export const ElCascaderPanel: SFCWithInstall<typeof CascaderPanel> =
+  withInstall(CascaderPanel)
 
-const _CascaderPanel = CascaderPanel as SFCWithInstall<typeof CascaderPanel>
-
-export default _CascaderPanel
-export const ElCascaderPanel = _CascaderPanel
+export default ElCascaderPanel
 export * from './src/types'
 export * from './src/config'
 export * from './src/instance'

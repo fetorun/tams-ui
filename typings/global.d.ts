@@ -1,5 +1,5 @@
-// GlobalComponents for Volar
 declare module 'vue' {
+  // GlobalComponents for Volar
   export interface GlobalComponents {
     ElAffix: typeof import('tams-ui')['ElAffix']
     ElAlert: typeof import('tams-ui')['ElAlert']
@@ -92,6 +92,7 @@ declare module 'vue' {
     ElSkeleton: typeof import('tams-ui')['ElSkeleton']
     ElSkeletonItem: typeof import('tams-ui')['ElSkeletonItem']
     ElStatistic: typeof import('tams-ui')['ElStatistic']
+    ElCountdown: typeof import('tams-ui')['ElCountdown']
     ElCheckTag: typeof import('tams-ui')['ElCheckTag']
     ElDescriptions: typeof import('tams-ui')['ElDescriptions']
     ElDescriptionsItem: typeof import('tams-ui')['ElDescriptionsItem']
@@ -100,6 +101,8 @@ declare module 'vue' {
     ElWatermark: typeof import('tams-ui')['ElWatermark']
     ElTour: typeof import('tams-ui')['ElTour']
     ElTourStep: typeof import('tams-ui')['ElTourStep']
+    ElSegmented: typeof import('tams-ui')['ElSegmented']
+    ElMention: typeof import('tams-ui')['ElMention']
   }
 
   interface ComponentCustomProperties {

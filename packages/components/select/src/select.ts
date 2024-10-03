@@ -46,7 +46,7 @@ export const SelectProps = buildProps({
    * @description tooltip theme, built-in theme: `dark` / `light`
    */
   effect: {
-    type: definePropType<PopperEffect>(String),
+    type: definePropType<PopperEffect | string>(String),
     default: 'light',
   },
   /**
@@ -221,6 +221,10 @@ export const SelectProps = buildProps({
     type: definePropType<Placement[]>(Array),
     default: ['bottom-start', 'top-start', 'right', 'left'],
   },
+  /**
+   * @description which element the selection dropdown appends to
+   */
+  appendTo: String,
   ...useEmptyValuesProps,
   ...useAriaProps(['ariaLabel']),
 })

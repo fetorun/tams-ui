@@ -34,7 +34,7 @@
             nsSelect.is('filterable', filterable),
             nsSelect.is('disabled', selectDisabled),
           ]"
-          @click.prevent.stop="toggleMenu"
+          @click.prevent="toggleMenu"
         >
           <div
             v-if="$slots.prefix"
@@ -165,8 +165,6 @@
                 spellcheck="false"
                 type="text"
                 :name="name"
-                @focus="handleFocus"
-                @blur="handleBlur"
                 @input="onInput"
                 @compositionstart="handleCompositionStart"
                 @compositionupdate="handleCompositionUpdate"
@@ -218,7 +216,11 @@
             </el-icon>
             <el-icon
               v-if="showClearBtn && clearIcon"
-              :class="[nsSelect.e('caret'), nsInput.e('icon')]"
+              :class="[
+                nsSelect.e('caret'),
+                nsInput.e('icon'),
+                nsSelect.e('clear'),
+              ]"
               @click.prevent.stop="handleClear"
             >
               <component :is="clearIcon" />
@@ -278,10 +280,9 @@ import { ClickOutside } from '@tams-ui/directives'
 import ElTooltip from '@tams-ui/components/tooltip'
 import ElTag from '@tams-ui/components/tag'
 import ElIcon from '@tams-ui/components/icon'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tams-ui/constants'
 import ElSelectMenu from './select-dropdown'
 import useSelect from './useSelect'
-import { SelectProps } from './defaults'
+import { SelectProps, selectEmits } from './defaults'
 import { selectV2InjectionKey } from './token'
 
 export default defineComponent({
@@ -294,16 +295,7 @@ export default defineComponent({
   },
   directives: { ClickOutside },
   props: SelectProps,
-  emits: [
-    UPDATE_MODEL_EVENT,
-    CHANGE_EVENT,
-    'remove-tag',
-    'clear',
-    'visible-change',
-    'focus',
-    'blur',
-  ],
-
+  emits: selectEmits,
   setup(props, { emit }) {
     const modelValue = computed(() => {
       const { modelValue: rawModelValue, multiple } = props
@@ -323,19 +315,19 @@ export default defineComponent({
       }),
       emit
     )
-    // TODO, remove the any cast to align the actual API.
     provide(selectV2InjectionKey, {
       props: reactive({
         ...toRefs(props),
         height: API.popupHeight,
         modelValue,
       }),
+      expanded: API.expanded,
       tooltipRef: API.tooltipRef,
       onSelect: API.onSelect,
       onHover: API.onHover,
       onKeyboardNavigate: API.onKeyboardNavigate,
       onKeyboardSelect: API.onKeyboardSelect,
-    } as any)
+    })
 
     return {
       ...API,

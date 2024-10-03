@@ -1,7 +1,6 @@
 import { defineComponent, inject } from 'vue'
-import { isArray } from '@vue/shared'
 import { isEqual } from 'lodash-unified'
-import { isFunction, isString } from '@tams-ui/utils'
+import { isArray, isFunction, isString } from '@tams-ui/utils'
 import { selectKey } from './token'
 import type { Component, VNode, VNodeNormalizedChildren } from 'vue'
 
@@ -37,7 +36,7 @@ export default defineComponent({
       }
 
       if (children.length) {
-        filterOptions(children![0]?.children)
+        filterOptions(children[0]?.children)
       }
 
       if (!isEqual(valueList, cachedValueList)) {

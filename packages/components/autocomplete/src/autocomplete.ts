@@ -1,5 +1,10 @@
-import { NOOP } from '@vue/shared'
-import { buildProps, definePropType, isObject, isString } from '@tams-ui/utils'
+import {
+  NOOP,
+  buildProps,
+  definePropType,
+  isObject,
+  isString,
+} from '@tams-ui/utils'
 import { useTooltipContentProps } from '@tams-ui/components/tooltip'
 import { useAriaProps } from '@tams-ui/hooks'
 import {

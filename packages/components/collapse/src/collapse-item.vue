@@ -14,9 +14,11 @@
       @blur="focusing = false"
     >
       <slot name="title">{{ title }}</slot>
-      <el-icon :class="arrowKls">
-        <arrow-right />
-      </el-icon>
+      <slot name="icon" :is-active="isActive">
+        <el-icon :class="arrowKls">
+          <component :is="icon" />
+        </el-icon>
+      </slot>
     </button>
 
     <el-collapse-transition>
@@ -37,7 +39,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ArrowRight } from '@element-plus/icons-vue'
 import ElCollapseTransition from '@tams-ui/components/collapse-transition'
 import ElIcon from '@tams-ui/components/icon'
 import { collapseItemProps } from './collapse-item'

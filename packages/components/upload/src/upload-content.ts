@@ -1,5 +1,4 @@
-import { NOOP } from '@vue/shared'
-import { buildProps, definePropType } from '@tams-ui/utils'
+import { NOOP, buildProps, definePropType } from '@tams-ui/utils'
 import { uploadBaseProps } from './upload'
 
 import type { ExtractPropTypes } from 'vue'

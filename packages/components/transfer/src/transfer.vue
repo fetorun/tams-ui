@@ -54,7 +54,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, h, reactive, ref, useSlots, watch } from 'vue'
+import { Comment, computed, h, reactive, ref, useSlots, watch } from 'vue'
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
 import { debugWarn, isEmpty, isUndefined } from '@tams-ui/utils'
 import { useLocale, useNamespace } from '@tams-ui/hooks'
@@ -145,7 +145,12 @@ watch(
 const optionRender = computed(() => (option: TransferDataItem) => {
   if (props.renderContent) return props.renderContent(h, option)
 
-  if (slots.default) return slots.default({ option })
+  const defaultSlotVNodes = (slots.default?.({ option }) || []).filter(
+    (node) => node.type !== Comment
+  )
+  if (defaultSlotVNodes.length) {
+    return defaultSlotVNodes
+  }
 
   return h(
     'span',
@@ -158,7 +163,7 @@ defineExpose({
   clearQuery,
   /** @description left panel ref */
   leftPanel,
-  /** @description left panel ref */
+  /** @description right panel ref */
   rightPanel,
 })
 </script>

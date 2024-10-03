@@ -16,7 +16,9 @@
     "rootDir": ".",
     "types": [],
     "paths": {
-      "@tams-ui/*": ["packages/*"]
-    }
+      "tams-ui/*": ["packages/*"],
+      "tams-ui": ["packages/tams-ui"]
+    },
+    "preserveSymlinks": true
   }
 }

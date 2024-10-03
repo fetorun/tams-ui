@@ -8,7 +8,7 @@
       role="switch"
       :aria-checked="checked"
       :aria-disabled="switchDisabled"
-      :aria-label="label || ariaLabel"
+      :aria-label="ariaLabel"
       :name="name"
       :true-value="activeValue"
       :false-value="inactiveValue"
@@ -73,9 +73,13 @@
 
 <script lang="ts" setup>
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
-import { isPromise } from '@vue/shared'
-import { Loading } from '@element-plus/icons-vue'
-import { addUnit, debugWarn, isBoolean, throwError } from '@tams-ui/utils'
+import {
+  addUnit,
+  debugWarn,
+  isBoolean,
+  isPromise,
+  throwError,
+} from '@tams-ui/utils'
 import ElIcon from '@tams-ui/components/icon'
 import {
   useFormDisabled,
@@ -88,7 +92,7 @@ import {
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
 } from '@tams-ui/constants'
-import { useDeprecated, useNamespace } from '@tams-ui/hooks'
+import { useNamespace } from '@tams-ui/hooks'
 import { switchEmits, switchProps } from './switch'
 import type { CSSProperties } from 'vue'
 
@@ -217,17 +221,6 @@ const focus = (): void => {
 onMounted(() => {
   input.value!.checked = checked.value
 })
-
-useDeprecated(
-  {
-    from: 'label',
-    replacement: 'aria-label',
-    version: '2.8.0',
-    scope: 'el-switch',
-    ref: 'https://tams-ui.org/en-US/component/switch.html',
-  },
-  computed(() => !!props.label)
-)
 
 defineExpose({
   /**

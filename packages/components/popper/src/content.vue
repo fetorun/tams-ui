@@ -34,11 +34,10 @@ import {
   unref,
   watch,
 } from 'vue'
-import { NOOP } from '@vue/shared'
 import { isNil } from 'lodash-unified'
+import { NOOP, isElement } from '@tams-ui/utils'
 import ElFocusTrap from '@tams-ui/components/focus-trap'
 import { formItemContextKey } from '@tams-ui/components/form'
-import { isElement } from '@tams-ui/utils'
 import { POPPER_CONTENT_INJECTION_KEY } from './constants'
 import { popperContentEmits, popperContentProps } from './content'
 import {

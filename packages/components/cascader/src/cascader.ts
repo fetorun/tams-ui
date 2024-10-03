@@ -1,3 +1,4 @@
+import { placements } from '@popperjs/core'
 import { CommonProps } from '@tams-ui/components/cascader-panel'
 import { buildProps, definePropType, isBoolean } from '@tams-ui/utils'
 import { useEmptyValuesProps, useSizeProp } from '@tams-ui/hooks'
@@ -8,6 +9,7 @@ import type {
   CascaderNode,
   CascaderValue,
 } from '@tams-ui/components/cascader-panel'
+import type { Placement } from '@tams-ui/components/popper'
 
 export const cascaderProps = buildProps({
   ...CommonProps,
@@ -86,6 +88,21 @@ export const cascaderProps = buildProps({
   beforeFilter: {
     type: definePropType<(value: string) => boolean | Promise<any>>(Function),
     default: () => true,
+  },
+  /**
+   * @description position of dropdown
+   */
+  placement: {
+    type: definePropType<Placement>(String),
+    values: placements,
+    default: 'bottom-start',
+  },
+  /**
+   * @description list of possible positions for dropdown
+   */
+  fallbackPlacements: {
+    type: definePropType<Placement[]>(Array),
+    default: ['bottom-start', 'bottom', 'top-start', 'top', 'right', 'left'],
   },
   /**
    * @description custom class name for Cascader's dropdown

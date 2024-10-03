@@ -1,6 +1,7 @@
 import { buildProps } from '@tams-ui/utils'
 import { useSizeProp } from '@tams-ui/hooks'
 
+import type { ExtractPropTypes } from 'vue'
 import type Description from './description.vue'
 
 export const descriptionProps = buildProps({
@@ -43,4 +44,5 @@ export const descriptionProps = buildProps({
   },
 } as const)
 
+export type DescriptionProps = ExtractPropTypes<typeof descriptionProps>
 export type DescriptionInstance = InstanceType<typeof Description>

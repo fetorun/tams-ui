@@ -1,12 +1,16 @@
 import { withInstall, withNoopInstall } from '@tams-ui/utils'
 import Table from './src/table.vue'
 import TableColumn from './src/tableColumn'
+import type { SFCWithInstall } from '@tams-ui/utils'
 
-export const ElTable = withInstall(Table, {
+export const ElTable: SFCWithInstall<typeof Table> & {
+  TableColumn: typeof TableColumn
+} = withInstall(Table, {
   TableColumn,
 })
 export default ElTable
-export const ElTableColumn = withNoopInstall(TableColumn)
+export const ElTableColumn: SFCWithInstall<typeof TableColumn> =
+  withNoopInstall(TableColumn)
 
 export type TableInstance = InstanceType<typeof Table>
 

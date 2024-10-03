@@ -3,9 +3,7 @@
     :id="inputId"
     :class="[rateClasses, ns.is('disabled', rateDisabled)]"
     role="slider"
-    :aria-label="
-      !isLabeledByFormItem ? label || ariaLabel || 'rating' : undefined
-    "
+    :aria-label="!isLabeledByFormItem ? ariaLabel || 'rating' : undefined"
     :aria-labelledby="
       isLabeledByFormItem ? formItemContext?.labelId : undefined
     "
@@ -67,7 +65,7 @@ import {
   useFormSize,
 } from '@tams-ui/components/form'
 import { ElIcon } from '@tams-ui/components/icon'
-import { useDeprecated, useNamespace } from '@tams-ui/hooks'
+import { useNamespace } from '@tams-ui/hooks'
 import { rateEmits, rateProps } from './rate'
 import type { CSSProperties, Component } from 'vue'
 
@@ -303,17 +301,6 @@ watch(
 if (!props.modelValue) {
   emit(UPDATE_MODEL_EVENT, 0)
 }
-
-useDeprecated(
-  {
-    from: 'label',
-    replacement: 'aria-label',
-    version: '2.8.0',
-    scope: 'el-rate',
-    ref: 'https://tams-ui.org/en-US/component/rate.html',
-  },
-  computed(() => !!props.label)
-)
 
 defineExpose({
   /** @description set current value */

@@ -1,5 +1,5 @@
 <template>
-  <teleport
+  <el-teleport
     :to="appendTo"
     :disabled="appendTo !== 'body' ? false : !appendToBody"
   >
@@ -71,7 +71,7 @@
         </div>
       </el-overlay>
     </transition>
-  </teleport>
+  </el-teleport>
 </template>
 
 <script lang="ts" setup>
@@ -79,6 +79,7 @@ import { computed, provide, ref, useSlots } from 'vue'
 import { ElOverlay } from '@tams-ui/components/overlay'
 import { useDeprecated, useNamespace, useSameTarget } from '@tams-ui/hooks'
 import ElFocusTrap from '@tams-ui/components/focus-trap'
+import ElTeleport from '@tams-ui/components/teleport'
 import ElDialogContent from './dialog-content.vue'
 import { dialogInjectionKey } from './constants'
 import { dialogEmits, dialogProps } from './dialog'
@@ -141,9 +142,14 @@ const overlayEvent = useSameTarget(onModalClick)
 
 const draggable = computed(() => props.draggable && !props.fullscreen)
 
+const resetPosition = () => {
+  dialogContentRef.value?.resetPosition()
+}
+
 defineExpose({
   /** @description whether the dialog is visible */
   visible,
   dialogContentRef,
+  resetPosition,
 })
 </script>

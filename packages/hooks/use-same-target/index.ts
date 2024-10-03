@@ -1,4 +1,4 @@
-import { NOOP } from '@vue/shared'
+import { NOOP } from '@tams-ui/utils'
 
 export const useSameTarget = (handleClick?: (e: MouseEvent) => void) => {
   if (!handleClick) {

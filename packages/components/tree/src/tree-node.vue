@@ -92,12 +92,11 @@ import {
   ref,
   watch,
 } from 'vue'
-import { isFunction, isString } from '@vue/shared'
 import { CaretRight, Loading } from '@element-plus/icons-vue'
+import { debugWarn, isFunction, isString } from '@tams-ui/utils'
 import ElCollapseTransition from '@tams-ui/components/collapse-transition'
 import ElCheckbox from '@tams-ui/components/checkbox'
 import { ElIcon } from '@tams-ui/components/icon'
-import { debugWarn } from '@tams-ui/utils'
 import { useNamespace } from '@tams-ui/hooks'
 import NodeContent from './tree-node-content.vue'
 import { getNodeKey as getNodeKeyUtil, handleCurrentChange } from './model/util'
@@ -271,8 +270,9 @@ export default defineComponent({
         tree.ctx.emit('node-collapse', props.node.data, props.node, instance)
         props.node.collapse()
       } else {
-        props.node.expand()
-        ctx.emit('node-expand', props.node.data, props.node, instance)
+        props.node.expand(() => {
+          ctx.emit('node-expand', props.node.data, props.node, instance)
+        })
       }
     }
 

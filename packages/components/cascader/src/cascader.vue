@@ -5,17 +5,10 @@
     :teleported="teleported"
     :popper-class="[nsCascader.e('dropdown'), popperClass]"
     :popper-options="popperOptions"
-    :fallback-placements="[
-      'bottom-start',
-      'bottom',
-      'top-start',
-      'top',
-      'right',
-      'left',
-    ]"
+    :fallback-placements="fallbackPlacements"
     :stop-popper-mouse-event="false"
     :gpu-acceleration="false"
-    placement="bottom-start"
+    :placement="placement"
     :transition="`${nsCascader.namespace.value}-zoom-in-top`"
     effect="light"
     pure
@@ -159,7 +152,11 @@
         :render-label="$slots.default"
         @expand-change="handleExpandChange"
         @close="$nextTick(() => togglePopperVisible(false))"
-      />
+      >
+        <template #empty>
+          <slot name="empty" />
+        </template>
+      </el-cascader-panel>
       <el-scrollbar
         v-if="filterable"
         v-show="filtering"
@@ -198,9 +195,15 @@
 
 <script lang="ts" setup>
 import { computed, nextTick, onMounted, ref, useAttrs, watch } from 'vue'
-import { isPromise } from '@vue/shared'
 import { cloneDeep, debounce } from 'lodash-unified'
 import { useCssVar, useResizeObserver } from '@vueuse/core'
+import {
+  debugWarn,
+  focusNode,
+  getSibling,
+  isClient,
+  isPromise,
+} from '@tams-ui/utils'
 import ElCascaderPanel from '@tams-ui/components/cascader-panel'
 import ElInput from '@tams-ui/components/input'
 import ElTooltip from '@tams-ui/components/tooltip'
@@ -215,7 +218,6 @@ import {
   useLocale,
   useNamespace,
 } from '@tams-ui/hooks'
-import { debugWarn, focusNode, getSibling, isClient } from '@tams-ui/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
@@ -719,5 +721,9 @@ defineExpose({
    * @description cascader content ref
    */
   contentRef,
+  /**
+   * @description selected content text
+   */
+  presentText,
 })
 </script>

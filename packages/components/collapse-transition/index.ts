@@ -1,14 +1,8 @@
+import { withInstall } from '@tams-ui/utils'
 import CollapseTransition from './src/collapse-transition.vue'
-import type { App } from 'vue'
 import type { SFCWithInstall } from '@tams-ui/utils'
 
-CollapseTransition.install = (app: App): void => {
-  app.component(CollapseTransition.name!, CollapseTransition)
-}
+export const ElCollapseTransition: SFCWithInstall<typeof CollapseTransition> =
+  withInstall(CollapseTransition)
 
-const _CollapseTransition = CollapseTransition as SFCWithInstall<
-  typeof CollapseTransition
->
-
-export default _CollapseTransition
-export const ElCollapseTransition = _CollapseTransition
+export default ElCollapseTransition

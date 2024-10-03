@@ -1,5 +1,4 @@
-import { NOOP } from '@vue/shared'
-import { buildProps, definePropType, mutable } from '@tams-ui/utils'
+import { NOOP, buildProps, definePropType, mutable } from '@tams-ui/utils'
 import { ajaxUpload } from './ajax'
 import type { Awaitable, Mutable } from '@tams-ui/utils'
 

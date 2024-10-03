@@ -1,6 +1,10 @@
 import { Teleport, h, onUnmounted, ref } from 'vue'
-import { NOOP } from '@vue/shared'
-import { createGlobalNode, isClient, removeGlobalNode } from '@tams-ui/utils'
+import {
+  NOOP,
+  createGlobalNode,
+  isClient,
+  removeGlobalNode,
+} from '@tams-ui/utils'
 
 import type { Ref, VNode } from 'vue'
 
